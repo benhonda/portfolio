@@ -1,0 +1,206 @@
+metadata:
+  title_suffix: " | benhonda.dev"
+  desc:
+    Ben Honda is a software developer and designer from Ontario Canada. He
+    specializes in delivering dynamic, user-centric front end interfaces using
+    technologies including React, Svelte, Swift, Javascript, and Python.
+
+nav:
+  - title: Home
+  - title: About
+  - title: Work
+
+social_bar:
+  # - title: ""
+  #   content: ""
+  # - title: ""
+  #   content: ""
+  - title: Email
+    content: hi@benhonda.dev
+  - title: LinkedIn
+    content: benhonda/
+    href: "https://www.linkedin.com/in/benhonda/"
+  - title: GitHub
+    content: "@benhonda"
+    href: https://github.com/benhonda
+
+quick_about:
+  - label: ""
+    content: 
+      - Ben Honda
+      - Burlington, ON
+      - bhonda89@gmail.com
+
+# home:
+#   intro: "Passionate"
+#   hats:
+#     - title: Frontend Development
+#       svg: svg/block1.html
+#       desc: Hello
+#       color: text-purple-300
+#     - title: Frontend Development
+#       svg: svg/block2.html
+#       desc: Hello
+#       color: text-emerald-300
+#     - title: Frontend Development
+#       svg: svg/block3.html
+#       desc: Hello
+#       color: text-orange-200
+#   projects:
+#     - title: ADAPTS
+#       subtitle: Design, Strategy, Full Stack Development
+#       img: /assets/images/previewAdapts1.png
+#       class: bg-zinc-800
+#       desc: |
+#         A revamped URL-Shortener to allow clients of The Adpharm to track click data of URLs and QR Codes across channels, enabling an omnichannel experience.
+#       company: The Adpharm
+#       footnotes:
+#         - The Adpharm
+#         - May 2022 - Present
+#       tags:
+#         - React
+#         - Django
+#         - Vite
+#       type: Web App
+#       live_url: adapts.theadpharm.com
+#     - title: Portal Manager
+#       subtitle: Design, Strategy, Full Stack Development
+#       img: /assets/images/previewPortalManager.png
+#       class: bg-indigo-400
+#       desc:
+#         Portals are private learning platforms that we deployed for clients of
+#         IBM. I led this project that made requesting and deploying portals
+#         easier than ever.
+#       company: IBM
+#       tags:
+#         - Phoenix/Elixir
+#         - HubSpot CRM (API)
+#         - Postgres
+#         - Kubernetes
+#       type: Web App
+#       live_url: portals.skills.network
+#     - title: Open House
+#       subtitle: Design, Strategy, Full Stack Development
+#       img: /assets/images/previewOpenHouse.png
+#       class: bg-[#2d3aeb]
+#       # class: bg-[#4450ee]
+#       desc:
+#         Finding your ideal house to rent is a tall task--even in college towns
+#         where turnover is high. Open House (2019-2021) was a web platform born
+#         out of my dorm room that made it easier.
+#       company: benhonda.dev
+#       type: Web App
+#       tags:
+#         - React SPA
+#         - Firebase
+#         - Scrapy
+
+contact_info:
+  hire_me:
+    title: ""
+  socials:
+    - title: LinkedIn
+      url: https://linkedin.com/in/benhonda
+      icon: svg/linkedin.html
+    - title: GitHub
+      url: https://github.com/benhonda
+      icon: svg/github.html
+
+work_exp:
+  - company: IBM
+    role: Frontend Software Engineer
+    type: Internship (16 months)
+  - company: The Adpharm
+    role: Full Stack Software Developer
+    type: Co-Op (5 months)
+  - company: Bitformations
+    role: Full Stack Software Developer
+    type: Co-Op (5 months)
+
+featured_work:
+  - img: /assets/images/adapts-prev-2.png
+    title: ADAPTS
+    link: /projects/adapts/
+    # desc: For the clients of The Adpharm, analytics drive sales. ADAPTS is a URL shortener that enables an omnichannel experience.
+    desc:
+      ADAPTS allows The Adpharm to get specific on which channels are converting
+      and which aren’t. This information is used to optimize the allocation of
+      human and monetary resources, leading to compounded results on top
+      performers and minified losses on the losers.
+  - img: /assets/images/pm-prev-1.png
+    title: Portal Manager
+    link: /projects/portal-manager/
+    desc:
+      Portals are private learning platforms that we deployed for clients of
+      IBM. I led this project that made requesting and deploying portals easier
+      than ever.
+
+featured_articles:
+  - title: How to make great apps
+    type: Bottomless collection
+  - title: Building a static site generator from scratch
+    type: Case Study
+  - title: Build a personal cloud storage server in a day
+    type: Tutorial
+
+tech_skills:
+  - category: Proficient
+    tags:
+      - ReactJS
+      - HTML
+      - CSS
+      - Git
+      - GitHub
+      - VanillaJS
+      - Bash/Zsh
+      - TailwindCSS
+      - Figma
+      - XD
+      - Photoshop
+      - Django
+      - Eleventy
+  - category: Intermediate
+    tags:
+      - Python
+      - Docker
+      - Vite
+      - Webpack
+      - Phoenix/Elixir
+  - category: Novice
+    tags:
+      - Kubernetes
+      - OpenShift
+      - Svelte
+      - three.js
+      - WebGL
+
+resume_link: "/assets/cv/nov2022/BenHonda_SoftwareDeveloper_Resume.pdf"
+
+# ALSO
+# remember to update in SlideoutMenu... (react does not play nice with this)
+links:
+  - title: Home
+    url: "/"
+  - title: Work Experience
+    url: "/employment/"
+  - title: Projects
+    url: "/projects/"
+  - title: Blog
+    url: "/blog/"
+  - title: Resume
+    url: "/assets/cv/nov2022/BenHonda_SoftwareDeveloper_Resume.pdf"
+    download: true
+
+chat:
+  - title: "bhonda89@gmail.com"
+    copy: "bhonda89@gmail.com"
+    url: "mailto:bhonda89@gmail.com"
+  - title: "905.330.5115"
+    copy: "+19053305115"
+    url: "tel:+9053305115"
+
+connect:
+  - title: LinkedIn
+    url: "https://linkedin.com/in/benhonda"
+  - title: GitHub
+    url: "https://github.com/benhonda"

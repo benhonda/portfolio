@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{{ title }}{{ data.metadata.title_suffix }}</title>
+
+    <meta name="description" content="{{ data.metadata.desc }}" />
+    <meta name="author" content="Ben Honda" />
+    <meta name="theme-color" content="#111111" />
+
+    <!-- For meta OG best practices, go to https://developers.facebook.com/docs/sharing/best-practices -->
+    <meta property="og:title" content="{{ title }}{{ data.metadata.title_suffix }}" />
+    <meta property="og:description" content="{{ data.metadata.desc }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="benhonda.dev" />
+    <meta property="og:image" content="512-icon.png" />
+
+    <!-- For browsers that don't support .svg favicons (pretty much just Safari right now) -->
+    <!-- favicon.ico 32×32 -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+
+    <!-- For browsers that DO support SVG favicons (most of them now): -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+
+    <!-- apple-touch-icon 180×180 -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- web manifest -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Animate CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/assets/tw.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+
+    <!-- AlpineJS -->
+    <script src="//unpkg.com/alpinejs" defer></script>
+  </head>
+  <body class="bg-[#111]">
+    <!-- Google Tag Manager (noscript) -->
+
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Main content -->
+    {{ content | safe }}
+  </body>
+</html>

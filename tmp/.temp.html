@@ -1,0 +1,304 @@
+<!-- interactive tabl3 2 (same as below) -->
+
+<!-- ================================================= -->
+      <!-- 05 TECHNICAL SKILLS (table) -->
+      <!-- ================================================= -->
+      <div class="md:flex mt-24">
+        <div class="flex-1 min-w-[15rem] lg:min-w-[20rem]">
+          <!-- Nothing here -->
+        </div>
+
+        <div class="flex-[3_3_0%] border-t border-white/30">
+          {% for item in data.tech_skills %}
+
+          <div class="">
+            <div
+              class="group w-full text-left md:flex items-start justify-start py-6 border-b border-white/30"
+            >
+              <div class="flex-1">
+                <div class="max-w-[16rem] md:max-w-full">
+                  <h3 class="h2 md:h1 leading-tight">
+                    <span class="text-">{{ item.category }}</span>
+                  </h3>
+                </div>
+              </div>
+
+              <div class="flex-shrink-0 max-w-lg mt-6 md:mt-1">
+                <div
+                  class="flex-[3_3_0%] flex items-start justify-start md:justify-end flex-wrap"
+                >
+                  {% for tag in item.tags %}
+                  <div class="mr-2 mb-2 py-0.5 px-2.5 bg-white/10 rounded-full">
+                    <p class="p">{{ tag }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- interactive accordian tools/skills/tags -->
+
+<!-- ================================================= -->
+      <!-- 05 TECHNICAL SKILLS (table) -->
+      <!-- ================================================= -->
+      <div class="md:flex mt-12">
+        <div class="flex-1 min-w-[15rem] lg:min-w-[20rem]">
+          <!-- Nothing here -->
+        </div>
+
+        <div class="flex-[3_3_0%] md:border-t border-white/90">
+          {% for item in data.tech_skills %}
+
+          <div class="" x-data="{ open: false }">
+            <button
+              type="button"
+              x-on:click="open = ! open"
+              class="group w-full text-left flex items-center justify-start py-6 border-b border-white/90"
+            >
+              <div class="flex-1">
+                <div class="max-w-[16rem] md:max-w-full">
+                  <h3 class="h2 md:h1 leading-tight">
+                    <span
+                      x-bind:class="! open ? 'transition-colors group-hover:text-white' : 'text-white'"
+                      >{{ item.category }}</span
+                    >
+                  </h3>
+                </div>
+              </div>
+
+              <div
+                class="flex-shrink-0 transition-colors text-white/70 group-hover:text-white"
+              >
+                <svg
+                  x-bind:class="! open ? 'w-12 h-12 md:w-16 md:h-16 transition-transform transform' : 'w-12 h-12 md:w-16 md:h-16 transition-transform transform rotate-45'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+              </div>
+            </button>
+
+            <div
+              x-cloak
+              x-bind:class="! open ? 'overflow-hidden h-0 transition-all' : 'h-[{{ item.tags.length | divided_by: 2 }}rem] transition-all'"
+            >
+              <div class="md:flex">
+                <div class="flex-1 min-w-[15rem] lg:min-w-[20rem]">
+                  <!-- Nothing here -->
+                </div>
+
+                <div
+                  class="flex-[3_3_0%] flex items-start justify-start flex-wrap"
+                >
+                  {% for tag in item.tags %}
+                  <div class="mr-2 mb-2 py-0.5 px-2.5 bg-white/10 rounded-full">
+                    <p class="p">{{ tag }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
+
+                <div class="w-40">
+                  <!-- Nothing here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+
+
+      <!-- end -->
+      <!-- end -->
+
+
+
+
+
+
+
+
+
+<!-- header -->
+
+<header class="z-40 fixed top-0 left-0 w-full py-6">
+  <div class="pg-padding-ext flex items-center justify-between text-white">
+    <!-- Brand here -->
+    <a
+      href="#"
+      class="mix-blend-difference relative group z-50 h1 font-medium text-white flex items-center space-x-1"
+    >
+      <div class="w-5 md:w-6 h-0.5 bg-white"></div>
+      <div class="relative min-w-[12rem] h-10">
+        <span
+          class="absolute left-0 top-0 transition-all opacity-100 transform translate-y-0 group-hover:-translate-y-8 group-hover:opacity-0"
+        >
+          bh
+        </span>
+        <span
+          class="absolute left-0 top-0 transition-all opacity-0 transform translate-y-8 group-hover:translate-y-0 group-hover:opacity-100"
+        >
+          benhonda.dev
+        </span>
+      </div>
+    </a>
+    <div></div>
+    <div class="flex items-center space-x-4">{% react "components/SlideoutMenu.jsx" true %}</div>
+  </div>
+</header>
+
+
+
+
+
+
+
+<!-- <div class="wrapper wrapper-border mt-[30vh]">
+    <h2 class="font-display text-white text-[5rem] font-light leading-none">
+      From idea to production.
+      <br />
+      Applications that kill.
+    </h2>
+
+    <p class="text-white mt-16 max-w-lg">
+      When I first learned to program it was all about web and app development. When you're just playing around, it's up
+      to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have helped me
+      develop a foundation in each facet and have made me a more well-rounded professional.
+    </p>
+  </div>
+
+  <div class="wrapper mt-36">
+    <div class="grid grid-cols-12">
+      <div class="col-span-5 bg-purple-600 bg-opacity-50">
+        <div class="aspect-square flex items-end justify-end p-16">
+          <div class="w-40">{% include "svg/block1.html" %}</div>
+        </div>
+      </div>
+
+      <div class="col-span-7 flex items-end justify-start p-16">
+        <p class="text-white max-w-lg">
+          Frontend development is my primary craft. I've spent the most time doing it, and it's what IBM hired me for.
+        </p>
+      </div>
+
+
+
+      <div class="col-span-5 flex items-end justify-end p-16">
+        <p class="text-white max-w-md text-2xl">
+          When you're building applications on your own, you have to play all the parts. I haven't created a big-time
+          website* yet, but each project teaches me something new.
+
+          <br />
+          <br />
+
+          *Million-hits-per-day kind of sites.
+        </p>
+      </div>
+
+      <div class="col-span-7 bg-emerald-500 bg-opacity-50">
+        <div class="aspect-square flex items-end justify-start p-16">
+          <div class="w-40">{% include "svg/block2.html" %}</div>
+        </div>
+      </div>
+
+
+
+      <div class="col-span-5 bg-orange-200 bg-opacity-50">
+        <div class="h-[50vh] flex items-end justify-end p-16">
+          <div class="w-40">{% include "svg/block3.html" %}</div>
+        </div>
+      </div>
+
+      <div class="col-span-7 flex items-end justify-start p-16">
+        <p class="text-white max-w-lg">
+          When I first learned to program it was all about web and app development. When you're just playing around,
+          it's up to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have
+          helped me develop a foundation in each facet and have made me a more well-rounded professional.
+        </p>
+      </div>
+    </div>
+  </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <!-- My passion lies in product design. My passion lies in frontend
+            development, but I do backend and a little bit of DevOps, too. -->
+
+              <!-- Skills are the <span class="line-through">new</span> currency of the working world, but without direction,
+            those skills and 2 bucks will get you a cup of coffee.
+            <br />
+            <br />
+            Let me drop an analogy on you.
+            <br />
+            <br />
+            Product design is like directing a movie. You tell people where to go and what to do.
+            <br />
+            <br />
+            Coding and software development are like acting. You bring the directors vision to life (and you get paid
+            well for doing it).
+            <br />
+            <br />
+            Without the actors, the directors would be out of a job. Without the directors, the actors would be out of a
+            job (or worse). -->
+
+              <!-- When you take the skills to build digital products and combine it with a passion for product design, you get real results. -->
+              <!-- When you take a passion for product design and combine it with the tools to make it happen, you get real results. -->
+
+              <!-- When product design meets software development, beautiful things happen.
+            <br />
+            <br />
+            A strict attention-to-detail should always be adhered to&mdash;from idea generation to deployment.
+            <br /><br />
+            <span class="text-white"> More than software development or UI design, that’s what I practice. </span> -->
+
+
+
+
+
+
+
+
+
+
+
+            

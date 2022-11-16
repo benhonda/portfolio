@@ -1,0 +1,246 @@
+---
+layout: "layouts/bedrock.njk"
+title: "Home"
+---
+
+<div class="relative max-w-[120rem] mx-auto">
+  <header class="fixed top-0 left-0 w-full wrapper py-6 flex items-center justify-between text-white">
+    {% react "components/brand.jsx" true %}
+    <div></div>
+    <div class="flex items-center space-x-4">
+      <!-- <a href="#" class="font-normal"><span class="font-bold border-b-2 border-white">Home</span></a> -->
+
+      <!-- <a href="#" class="font-normal text-3xl mix-blend-normal">Menu</a> -->
+      {% react "components/SlideoutMenu.jsx" true %}
+    </div>
+  </header>
+
+  <div class="pt-32 wrapper">
+    <h1 class="text-[5rem] leading-none text-gray-100 font-display font-light max-w-6xl">
+      Self-proclaimed product designer with a background in
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">web</span> and
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">mobile</span>.
+    </h1>
+
+    <!-- <a href="#" class="flex items-center justify-center border border-white max-w-[20rem] py-4 text-white font-semibold">About Ben Honda</a> -->
+
+    <!-- <p class="text-white max-w-md mt-12">
+    Building these applications requires an acute attention to detail and unwillingness to settle for mediocrity—from
+    conception to wire-framing, prototyping, development, and deployment.
+  </p> -->
+  </div>
+
+  <div class="wrapper wrapper-border mt-[40vh]">
+    <div class="grid grid-cols-12 gap-16">
+      <div class="col-span-5">
+        <h2 class="font-sans text-white text-4xl font-semibold">
+          Attention to detail and unwillingness to settle for mediocrity.
+          <br />
+          <br />
+          From conception to wire-framing, prototyping, development, and deployment.
+        </h2>
+      </div>
+      <div class="col-span-5">
+        <p class="text-white">
+          Why do we strive for excellence when mediocrity is required? - Paul Arden in “It’s not how good you are, it’s
+          how good you want to be.”
+        </p>
+        <p class="text-white mt-4">
+          I believe that everyone is capable of creating great products. The reason it seems like only a special few can
+          do so is because creating something great requires a level of intensity and energy that only the most-driven
+          and most-passionate possess. The most-driven people can do whatever they want, and they can do it better than
+          most. The most-passionate will excel in what they are most passionate about. I am creating better and better
+          digital products because I love building digital products.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border mt-[30vh]">
+    <h2 class="font-display text-white text-[5rem] font-light leading-none">
+      From idea to production.
+      <br />
+      Applications that kill.
+    </h2>
+
+    <p class="text-white mt-16 max-w-lg">
+      When I first learned to program it was all about web and app development. When you're just playing around, it's up
+      to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have helped me
+      develop a foundation in each facet and have made me a more well-rounded professional.
+    </p>
+  </div>
+
+  <div class="wrapper mt-36">
+    <div class="grid grid-cols-12">
+      <div class="col-span-5 bg-purple-600 bg-opacity-50">
+        <div class="aspect-square flex items-end justify-end p-16">
+          <div class="w-40">{% include "svg/block1.html" %}</div>
+        </div>
+      </div>
+
+      <div class="col-span-7 flex items-end justify-start p-16">
+        <p class="text-white max-w-lg">
+          Frontend development is my primary craft. I've spent the most time doing it, and it's what IBM hired me for.
+        </p>
+      </div>
+
+      <!-- Second row -->
+
+      <div class="col-span-5 flex items-end justify-end p-16">
+        <p class="text-white max-w-md text-2xl">
+          When you're building applications on your own, you have to play all the parts. I haven't created a big-time
+          website* yet, but each project teaches me something new.
+
+          <br />
+          <br />
+
+          *Million-hits-per-day kind of sites.
+        </p>
+      </div>
+
+      <div class="col-span-7 bg-emerald-500 bg-opacity-50">
+        <div class="aspect-square flex items-end justify-start p-16">
+          <div class="w-40">{% include "svg/block2.html" %}</div>
+        </div>
+      </div>
+
+      <!-- third row -->
+
+      <div class="col-span-5 bg-orange-200 bg-opacity-50">
+        <div class="h-[50vh] flex items-end justify-end p-16">
+          <div class="w-40">{% include "svg/block3.html" %}</div>
+        </div>
+      </div>
+
+      <div class="col-span-7 flex items-end justify-start p-16">
+        <p class="text-white max-w-lg">
+          When I first learned to program it was all about web and app development. When you're just playing around,
+          it's up to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have
+          helped me develop a foundation in each facet and have made me a more well-rounded professional.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border mt-[30vh]">
+    <h2 class="font-display text-white text-[5rem] font-light leading-none">Work</h2>
+    <p class="text-white mt-16 max-w-lg">
+      When I first learned to program it was all about web and app development. When you're just playing around, it's up
+      to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have helped me
+      develop a foundation in each facet and have made me a more well-rounded professional.
+    </p>
+  </div>
+
+  <div class="mt-40">
+    <table class="text-white w-full">
+      {% for proj in data.home.projects %}
+      <tr
+        class="wrapper border-b border-t border-gray-500 grid grid-cols-[1fr_1fr_2fr_minmax(10rem,_auto)] gap-12 py-6 cursor-click hover:bg-white/5"
+      >
+        <td>
+          <h5 class="text-xl font-semibold">{{ proj.title }}</h5>
+          <p class="text-gray-400 text-sm">{{ proj.type }}</p>
+          {% if proj.live_url %}
+          <a href="{{ proj.live_url }}" class="text-blue-400 hover:underline">{{ proj.live_url }}</a>
+          {% endif %}
+        </td>
+        <td>{{ proj.company_logo | default: proj.company }}</td>
+        <td>
+          <p class="max-w-md">{{ proj.desc }}</p>
+        </td>
+        <td class="flex flex-col">
+          <!-- prettier-ignore -->
+          {% for tag in proj.tags %}
+          <span>{{ tag }}</span>
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+  <div class="wrapper mt-[40vh]">
+    <h2 class="text-[5rem] leading-none text-white font-display font-light">
+      Let's chat.
+      <br /><br />
+      Drop me an email at
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">bhonda89@gmail.com</span>
+    </h2>
+  </div>
+  <!-- <div class="wrapper mt-16">
+    <p class="text-white">Hey, thanks for sticking around. Wondering where to go from here?</p>
+  </div> -->
+
+  <footer class="wrapper wrapper-border mt-24 pt-12 pb-6 bg-[#111]">
+    <div class="grid grid-cols-5 gap-16 text-white">
+      <div class="col-span-2">
+        <h5 class="font-medium text-gray-400 mb-4">Hire me</h5>
+        <p>
+          I'm graduating from Queen's Univeristy in the Spring of 2023 and I'm actively searching for my first big-boy
+          job. If you have an opening in any of these roles, let's chat.
+        </p>
+        <br />
+        <ul>
+          <li>Frontend Developer</li>
+          <li>Full Stack Developer</li>
+          <li>Software Engineer</li>
+          <li>Product Designer</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="font-medium text-gray-400 mb-4">Chat</h5>
+        <p>hi@benhonda.dev</p>
+        <p>905.330.5115</p>
+      </div>
+
+      <div></div>
+
+      <div>
+        <h5 class="font-medium text-gray-400 mb-4">Connect</h5>
+        <div class="flex items-center space-x-4">
+          {% for social in data.contact_info.socials %}
+          <a
+            href="{{ social.url }}"
+            class="flex items-center justify-center h-14 w-14 rounded-full border border-white p-3 text-white"
+          >
+            {% include social.icon %}
+          </a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 flex items-center justify-between text-gray-500">
+      <p class="">Interested in knowing how I made this?</p>
+      <p class="">Made with ♥️ or whatever.</p>
+    </div>
+  </footer>
+</div>
+
+
+
+
+
+
+
+
+<!-- WORK item option -->
+<div class="grid grid-cols-3 cursor-pointer {{ proj.class }}">
+  <div class="text-white flex flex-col justify-between px-12 py-24 bg-black/30">
+    <div>
+      <h2 class="h2 mb-2">{{ proj.title }}. <span class="opacity-60">{{ proj.subtitle }}</span></h2>
+    </div>
+
+    <div class="text-white">
+      <p class="text-md font-body mb-8 opacity-60">{{ proj.desc }}</p>
+      <a href="{{ proj.url }}" class="font-medium text-lg text-white hover:underline"
+        >Learn more about this project</a
+      >
+    </div>
+  </div>
+
+  <div class="col-span-2 p-8 pb-0">
+    <img src="{{ proj.img }}" alt="{{ proj.img_alt }}" class="h-full object-contain object-bottom" />
+  </div>
+</div>

@@ -1,0 +1,70 @@
+companies:
+  - name: The Adpharm
+    role: Full Stack Developer
+    timeline: May 2022 - Sep 2022
+    left_stack:
+      - label: Employees
+        content: "&lt; 40"
+      - label: Notable Clients
+        content: "AbbVie, Johnson & Johnson, Roche"
+      - label: Location
+        content: Oakville ON
+    right_stack:
+      - label: Role Description
+        points:
+          # - Designed and built ADAPTS, a link shortener used to track clicks and QR-code scans of assets and files across multiple mediums including print, email, and web.
+          # - Delivered digital products for clients in the form of programmed emails, surveys, and static sites. To expedite the development of the latter, I created a SSG tailored directly for our needs.
+          - Orchestrated the design and development of a URL shortener (ADAPTS)
+            that allowed The Adpharm to charge 5 - 20% more per account
+          - Decreased web development time by nearly 15% by implementing design
+            and development processes I had learned from my previous work at IBM
+          - Built a static site generator that resulted in fewer bugs, cleaner
+            code, and nearly 10% less development time on websites for clients
+
+  - name: IBM
+    role: Frontend Software Developer
+    timeline: May 2020 - Dec 2021
+    left_stack:
+      - label: Department
+        content: Cloud &amp; Cognitive Applications
+      - label: Team
+        content: IBM Skills Network
+      - label: Team size
+        content: "&lt; 40"
+      - label: Markham ON, Remote
+        content: Greater Toronto Area
+    right_stack:
+      - label: Role Description
+        points:
+          # - Worked alongside our in-house data scientists to develop web
+          #   applications that helped millions of people learn advance topics in
+          #   machine learning and artificial intelligence.
+          # - Led a small team to design and build a new web application that
+          #   enabled our clients to provision and manage private portals
+          #   (dedicated web applications for up-skilling users in machine
+          #   learning and AI.
+          - Directed the design and development of a web app that automated the
+            deployment and management of Skills Network Portals, saving ~3 hrs
+            per developer per week
+          - Co-led the transformation of a legacy React app into a hands-on
+            learning platform that has been used by thousands of students in
+            online courses provided by IBM and Coursera
+          - Deployed and maintained private learning platforms for clients on
+            IBM Cloud using Kubernetes and OpenShift, achieving the industry
+            standard 99.9% up-time
+
+  - name: BitFormations INC.
+    role: Full Stack Developer
+    timeline: May 2019 - Sep 2019
+    left_stack:
+      - label: Team size
+        content: "&lt; 10"
+      - label: Location
+        content: Greater Toronto Area
+    right_stack:
+      - label: Role Description
+        points:
+          - Spent a summer shadowing a full stack developer with 10+ years’
+            experience
+          - Contributed to the design and development of web and mobile
+            applications and took detailed notes at weekly client meetings

@@ -1,0 +1,313 @@
+portals:
+  title: "Portal Manager"
+  intro: 'I worked on many different projects during my time at IBM, but Portal
+    Manager was the first time I was given the reins and told to "make it work".
+    With the support of my fellow developers, I brought this project from idea
+    to design, and eventually, to fruition.
+
+    <br /><br />
+
+    Portal Manager was my first real taste of all the things I wanted to
+    do&mdash;design, build, and lead.'
+  stack1:
+    # we'll do table of contents separately
+    - label: "Live"
+      content:
+        '<a href="https://portals.skills.network/" target="_blank"
+        rel="noreferrer">portals.skills.network/</a>'
+    - label: "With"
+      content:
+        '<a href="https://www.ibm.com" target="_blank" rel="noreferrer">IBM
+        (Skills Network)</a>'
+    - label: "Role"
+      content:
+        "Frontend Developer<br />Backend Developer<br />UI/UX Designer<br
+        />Product Designer"
+
+  about_stack:
+    - label: Company
+      content: IBM
+    - label: Team
+      content: IBM Skills Network
+    - label: Team size
+      content: "&lt;40"
+
+  about_company:
+    I interned for 16 months as a Frontend Software Engineer at IBM. The team I
+    was a part of was called Skills Network. Our mission was to make technology
+    open and accessible to everyone through online courses and guided projects
+    on topics in machine learning and artificial intelligence. These courses are
+    mostly authored in-house by data scientists at IBM. To go along with these,
+    Skills Network also develops and maintains tools including
+    browser-integrated lab environments and private portals, which they provide
+    to private and public organizations. You can think of these private portals
+    like separate, secure instances of <a href="https://www.coursera.org/"
+    target="_blank" rel="noreferrer">Coursera</a>&mdash;where admins can provide
+    courses that employees/students/whoever should take. Clients of Skills
+    Network include governments, universities, banks, and private enterprises
+    looking to “up-skill” their workforce.
+
+  problem:
+    Getting a Skills Network Portal is a sizeable commitment. To get a portal,
+    you enter into a partnership with IBM to receive top-tier education on a
+    personalized platform. For a predetermined amount of time, you don’t have to
+    pay anything (like a free trial). Portals in this stage were called Pilot
+    Portals. Prospective clients&mdash;universities, governments,
+    enterprises&mdash;need to book a meeting with a senior-level staff member
+    (we called them Technical Account Managers or TAMs) in order to be
+    provisioned a pilot portal. We don’t just hand these things out willy-nilly.
+    The problem was that this process flowed through our Director. For each
+    prospective client he met with (and he had to meet with all of them), he was
+    the one who assigned a TAM for each portal, i.e. the person that would “own”
+    that client. He was also the one who was responsible for tracking our
+    clients in the CRM and making sure that people weren’t using more than their
+    allotted free trial time.
+
+  solution1: 'A Skills Network Portal is a private learning platform for
+    organizations of all kinds, from governments to enterprises. Hands-on
+    interactive courses and guided projects makes learning cutting-edge topics
+    like machine learning fun, effecient, and effective.
+
+    <br /> <br />
+
+    If you want a Skills Network Portal, <span class="font-semibold">Portal
+    Manager</span> is how you get one.'
+  solution_stack:
+    - label: "Type"
+      content: Web application
+    - label: "Build timeline"
+      content: "Jan 2021 - Aug 2021"
+
+  functionality:
+    Books meetings/demos with potential clients Provides a place for Technical
+    Account Managers to provision and manage portals for their own clients
+    Tracks customer relationships through the HubSpot API Automatically handles
+    upgrading to paid portals Acts as the marketing page for Skills Network
+    Portals
+
+  tech_stack:
+    - label: Design
+      tags:
+        - XD
+        - Photoshop
+    - label: Development
+      tags:
+        - Phoenix
+        - Elixir
+        - TailwindCSS
+        - Postgres
+    - label: Deployment
+      tags:
+        - Docker
+        - Kubernetes
+        - IBM Cloud
+
+  tech:
+    Portal Manager is the first application built at IBM Skills Network using
+    the Phoenix LiveView framework. Here’s how it works.
+
+  tech3:
+    - title: More coming soon...
+      content: ""
+
+adapts:
+  title: "ADAPTS"
+  intro:
+    'ADAPTS is a URL shortener similar to <a href=''https://bitly.com''
+    target=''_blank'' rel=''noreferrer'' class=''link''>Bit.ly</a> developed
+    in-house at The Adpharm. The project, led by myself and Colin McDonald (lead
+    developer at <a href=''https://www.bitformations.ca'' target=''_blank''
+    rel=''noreferrer'' class=''link''>BitFormations Inc.</a>) was the
+    culmination of 6 months’ work and years of asking: <br /><br />"Is what
+    we''re doing working?"'
+  stack1:
+    # we'll do table of contents separately
+    - label: "With"
+      content:
+        '<a href="https://www.theadpharm.com" target="_blank"
+        rel="noreferrer">The Adpharm</a>'
+    - label: "Role"
+      content:
+        "Frontend Developer<br />Backend Developer<br />UI/UX Designer<br
+        />Product Designer"
+
+  about_stack:
+    - label: Company
+      content: "The Adpharm"
+    - label: Employees
+      content: "&lt;50"
+    - label: "Notable Clients"
+      content: AbbVie<br />Johnson & Johnson<br />Roche
+
+  about_company:
+    "The Adpharm is a full-service marketing communications agency located in
+    downtown Oakville Ontario. Primarily working in the healthcare sector, The
+    Adpharm has helped pharmaceutical clients of all sizes to launch, nurture,
+    and optimize the potential of their brands through an omnichannel approach
+    consisting of traditional and digital marketing. They’ve worked on brands
+    including Tylenol, Nicorette, Botox, and Motrin."
+
+  problem1: '"Is what we’re doing working? Can we do better?"'
+  problem2:
+    There are some questions that can only be answered with data. Analytics
+    enable us to see what’s working and&mdash;more importantly&mdash;what
+    isn’t.<br /><br />To make effective money-making decisions, we need data
+    that is robust, reliable, and easy to understand. Data like this is tough to
+    get your hands on&mdash;and even tougher in an omnichannel strategy. Email
+    clicks, leave-behinds, journal ads, social media engagement&mdash;it’s all
+    very hard to track. <br /><br /> That’s why we created ADAPTS.
+
+  solution1: "ADAPTS, short for <span class='font-bold'>A</span>dvanced <span
+    class='font-bold'>D</span>igital <span class='font-bold'>A</span>nalytics
+    and <span class='font-bold'>P</span>ublishing <span
+    class='font-bold'>T</span>racking <span class='font-bold'>S</span>uite, is a
+    SaaS marketing tool that enables businesses to record, visualize, and
+    project campaign performance across multiple channels, from print to digital
+    and everything in between.
+    "
+  solution_stack:
+    - label: "Type"
+      content: "URL Shortener<br />(web application)"
+    - label: "Build timeline"
+      content: "Jan 2022 - Present<br />(in pre-release)"
+
+  functionality: "ADAPTS is like Bit.ly but with more analytical power and
+    better-fit to address The Adpharm’s needs. <br /> <br /> It all starts with
+    content&mdash;a PDF, video, maybe even a link to a registration page. You
+    upload the asset file (or URL) directly to ADAPTS (no more self-hosting, a
+    big + for sales people) and create a shortened link for it. Shortened links
+    can be customized to match your brand’s identity, for example, <span
+    class='link'>https://mybrand.com/asset</span>. For each marketing channel
+    (email, brochure, digital ad, etc.) you create a separate, unique shortened
+    link. If you want to track print channels, you can create a QR code that
+    will track scans in the same way a link will track clicks.
+
+    <br /> <br />
+
+    Every time someone clicks on a link or scans a QR code, they are sent to an
+    ADAPTS page, which then redirects them to the asset/URL that you created the
+    shortened link for. This is how tracking is made possible. For the couple
+    seconds that the user is on the ADAPTS page, their click data is sent
+    through the Google Analytics engine and back to ADAPTS, where it is stored.
+
+    <br /> <br />
+
+    This data can be used to generate real-time analytics dashboards that can
+    compare engagement link-to-link and even campaign-to-campaign.
+
+    <br /> <br />
+
+    Consider the following example:"
+
+  closing1:
+    "ADAPTS allows The Adpharm to get specific on which channels are converting
+    and which aren’t. This information is used to optimize the allocation of
+    human and monetary resources, leading to compounded results on top
+    performers and minified losses on the losers."
+
+  closing2: "This is how ADAPTS powers The Adpharm’s omnichannel philosophy."
+
+  tech_stack:
+    - label: Design
+      tags:
+        - "Figma"
+    - label: Development
+      tags:
+        - React
+        - Django
+        - TailwindCSS
+        - SQLite
+    - label: Deployment
+      tags:
+        - Amazon EC2
+
+  tech:
+    "Under the hood, ADAPTS is a Django project with a React single-page-app on
+    top."
+  tech2: "The reason I went with this architecture was to harness the best of
+    both React and Django. For example, I wanted to leverage Django’s built-in
+    authentication system. This project didn’t require any SSO or social logins
+    so Django’s auth pretty much worked out-of-the-box, which was a huge time
+    saver. I also, however, didn’t want to be put through the hell of trying to
+    build a dynamic interface with plain Django templates. React will be much
+    better for this, and we can use Create-React-App (CRA) to jumpstart our
+    development, since server-side rendering (SSR) isnt a requirement for our
+    auth-gated app. With the help of Vite, my new favourite bundler, I was able
+    to package up our CRA and a separate Tailwind instance (my forever-favourite
+    CSS tool) into a Django app that was served just like any other Django app.
+    As can be seen in the architecture diagram above, I created a separate
+    Tailwind project that gets bundled through it’s own Vite instance and
+    outputted to the Django static files directory. I did it this way for two
+    reasons: First, Tailwind classes would be available project-wide, even in
+    the plain Django templates where we wrote the login/registration pages.
+    Second, reusable abstraction classes that were created along the way are
+    available project-wide as well (Don’t Repeat Yourself).
+
+    <br /> <br />
+
+    I also had to bring in the Django Rest Framework since ADAPTS runs as a
+    single page app.
+    "
+
+  tech3:
+    - title: "Create React App (CRA)"
+      content:
+        - 'I used React (more specifically CRA) to build the dynamic front end
+          interface. ADAPTS is fully auth-gated, so there was no need for
+          server-rendered HTML for things like SEO. React is a framework I am
+          comfortable in so it gave me the freedom to build quickly. ADAPTS also
+          gave me the opportunity to try <a href="https://vitejs.dev/"
+          target="_blank" rel="noreferrer">Vite</a>, a front end tooling system
+          that can replace Webpack. It&apos;s faster and easier to configure
+          than Webpack. I like it.'
+    - title: "Django"
+      content:
+        - '<a href="https://www.djangoproject.com/" target="_blank"
+          rel="noreferrer">Django&apos;s</a> been around since the start of web
+          development (or so it feels like) but it&apos;s still a fantastic tool
+          for creating scalable and secure web apps. I come from a React
+          background, so when I really got into the nuts and bolts of Django I
+          found it all a little verbose, but that is to be expected in MVC
+          architecture (or MTV in Django&apos;s case). Django&apos;s built-in
+          auth system was a huge time-saver, as we didn&apos;t require any
+          social auth or SSO.'
+    - title: "Django Rest Framework"
+      content:
+        - 'With the SPA front end, <a
+          href="https://www.django-rest-framework.org/" target="_blank"
+          rel="noreferrer">Django Rest Framework (DRF)</a> was a necessary
+          addition to get data to and from the database (in client-side routing
+          we only get data from the server on initial page load). With our
+          monolithic architecture it was easy to secure our API using the
+          session cookies that Django exposes.'
+    - title: "Database (SQLite)"
+      content:
+        - 'For the longest time, I was under the impression that <a
+          href="https://www.sqlite.org/index.html" target="_blank"
+          rel="noreferrer">SQLite</a> was a development-only database for web
+          apps. My co-worker on ADAPTS (and the one who started the project), <a
+          href="https://www.bitformations.ca/" target="_blank"
+          rel="noreferrer">Colin McDonald</a>, made me see the light. SQLite is
+          capable of handling 100k requests/day safely and, in some cases, up to
+          10x that. We were not coming even close to that. With it&apos;s
+          seemless integration with Django and portability advantages, SQLite
+          turned out to be the obvious choice.'
+#
+#
+#
+# Would this be nice?
+# define:
+#   sidebox:
+#     _padding: "p-4 p-8"
+#     _margin: "mt-12 mb-4"
+
+# content_box:
+#   col_3_sidebox:
+#     company: "The Adpharm"
+#     employees: "~35"
+#     notable_clients: "AbbVirw, J&J ..."
+#   col_9:
+#     h2: "The Adpharm is a full-service marketing communications agency..."
+
+# full_width_image: "img/this.png"
+

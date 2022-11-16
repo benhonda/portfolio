@@ -1,0 +1,239 @@
+---
+layout: "layouts/bedrock.njk"
+title: "Home"
+---
+
+<div class="relative max-w-[120rem] mx-auto">
+  <header class="z-40 fixed top-0 left-0 w-full py-6">
+    <div class="wrapper flex items-center justify-between text-white">
+      {% react "components/brand.jsx" true %}
+      <div></div>
+      <div class="flex items-center space-x-4">
+        <!-- <a href="#" class="font-normal"><span class="font-bold border-b-2 border-white">Home</span></a> -->
+
+        <!-- <a href="#" class="font-normal text-3xl mix-blend-normal">Menu</a> -->
+        {% react "components/SlideoutMenu.jsx" true %}
+      </div>
+    </div>
+  </header>
+
+  <div class="mt-32 wrapper">
+    <h1 class="h1 leading-none max-w-7xl">
+      Building
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">beautiful</span> &amp;
+      <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">intuitive</span> apps for
+      web and mobile.
+    </h1>
+
+    <!-- <a href="#" class="flex items-center justify-center border border-white max-w-[20rem] py-4 text-white font-semibold">About Ben Honda</a> -->
+
+    <!-- <p class="text-white max-w-md mt-12">
+    Building these applications requires an acute attention to detail and unwillingness to settle for mediocrity—from
+    conception to wire-framing, prototyping, development, and deployment.
+  </p> -->
+  </div>
+
+  <div class="mt-48">
+    <div>
+      <!-- <div class="wrapper grid grid-cols-3 py-8 mb-48">
+        {% for item in data.social_bar %}
+        <div>
+          <p class="p3">{{ item.title }}</p>
+        </div>
+        {% endfor %}
+      </div> -->
+      <div class="wrapper flex flex-wrap items-end justify-start py-4">
+        {% for item in data.social_bar %}
+        <div class="flex items-center space-x-2 mr-16">
+          <p class="p3">{{ item.title }}</p>
+          {% if item.title == "Email" %}
+          <p class="h4">{{ item.content }}</p>
+          {% else %}
+          <a href="{{ item.href }}" target="_blank" rel="noreferrrer" class="h4 hover:underline">{{ item.content }}</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border">
+    <div class="pt-12 bg-zinc-9">
+      <div class="pb-64 grid grid-cols-5">
+        <div class="col-span-3">
+          <p class="num">01/</p>
+        </div>
+        <div class="col-span-2">
+          <div class="">
+            <h2 class="h2">
+              Hi, I'm Ben&nbsp;👋&nbsp;
+              <br />
+              <br />
+              I'm a software developer currently finishing a Computer Science undergrad at Queen's University in
+              Kingston, ON.
+              <br />
+              <br />
+              I spend most of my time building applications for the web. SPAs, E-Commerce, Portals&ndash;things of that
+              nature.
+              <br />
+              <br />
+              Like every person ever, I love a well-designed application. It's the reason I love what I do.
+              <br />
+              <br />
+            </h2>
+
+            <div class="mt-4">
+              <a href="#" class="btn">View my Resume</a>
+            </div>
+          </div>
+
+          <!-- <p class="p mt-8">Product design and software development is like directing and acting a movie.</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border mt-24 grid-1">
+    <div class="left-col">
+      <div class="flex items-start">
+        <!-- <div class="block xl:flex xl:items-start"> -->
+        <p class="num">02/</p>
+        <h2 class="h1">Projects</h2>
+      </div>
+    </div>
+    <div class="right-col">
+      <div class="max-w-xl">
+        <p class="pt-2 h2">
+          <!-- When I first learned to program it was all about web and app development. When you're just playing around, it's
+        up to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have helped
+        me develop a foundation in each facet and have made me a more well-rounded professional. -->
+
+          <!-- I could tell all about the things I've done, but you'd probably never believe me. Why don't I show you instead? -->
+          <!-- Hey, look at you. You've scrolled down here! You're part of the mere 15% of visitors on this site that will do so. -->
+          Every application is the same but different.
+          <br />
+          <br />
+          Different stack, different requirements, different audience&ndash;sure.
+          <br />
+          <br />
+          But same humans using the product. And same goal for me:
+          <br />
+          <br />
+          Make it easy, breezy, and beautiful. Am I allowed to say that?
+          <!-- Make this app easy, breezy, and beautiful. Am I allowed to say that? -->
+
+          <!-- I've been lucky enough to build some amazing products with some amazing people. Here, I've highlighted a couple
+        that I was heavily involved in that I think highlight my skillset well. -->
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper mt-40">
+    <div class="space-y-20">
+      {% for proj in data.home.projects %}
+      <div class="grid grid-cols-3">
+        <div class="col-span-2">
+          <img src="{{ proj.img }}" alt="{{ proj.alt }}" class="w-full" />
+        </div>
+        {% assign isOdd = forloop.index | modulo: 2 %}
+        <div class="{% if isOdd == 0 %}order-first items-end{% endif %} flex flex-col justify-end pb-12">
+          <div class="max-w-sm">
+            <h3 class="h2 font-bold">{{ proj.title }}</h3>
+            <p class="p2 mt-2 mb-6">{{ proj.desc }}</p>
+
+            {% render "macros/button.html", link: proj.url, title: "Learn more about this project" %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border mt-[30vh] grid-1">
+    <div class="left-col">
+      <div class="flex items-start">
+        <p class="num">03/</p>
+        <h2 class="h1">Skillset</h2>
+      </div>
+
+      <p class="mt-12 p max-w-md">
+        Time to get specific. Still confused about what it is I do? Expand each section and I'll tell you a little more
+        about my experiences in each facet.
+        <br />
+        <br />
+        If you're a tech-y, you might find this stuff interesting. If not, you can still play with the buttons.
+        <!-- When I first learned to program it was all about web and app development. When you're just playing around,
+      it's up to you to be the designer, frontend and backend developer, and DevOps engineer. These experiences have
+      helped me develop a foundation in each facet and have made me a more well-rounded professional. -->
+      </p>
+    </div>
+    <div class="right-col">
+      <div class="max-w-2xl xl:max-w-full w-full">{% react "components/Accordian.jsx" true %}</div>
+    </div>
+  </div>
+
+  <div class="wrapper wrapper-border mt-[40vh]">
+    <div class="block xl:flex xl:items-start">
+      <p class="num">03/</p>
+      <div>
+        <h2 class="h1">
+          <span class="">Let's chat.</span>
+          <br />
+          Drop me an email at
+        </h2>
+
+        <h2
+          class="break-all h1 text-transparent bg-clip-text bg-gradient-to-r transition-colors from-purple-400 to-pink-600"
+        >
+          hi@benhonda.dev
+        </h2>
+        <div class="mt-2">{% react "components/Copy.jsx" true %}</div>
+        <!-- {% react "components/Email.jsx" true %} -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="wrapper mt-16">
+    <p class="text-white">Hey, thanks for sticking around. Wondering where to go from here?</p>
+  </div> -->
+
+  <div class="wrapper mt-24">
+    <div class="block xl:flex xl:items-start">
+      <p class="num"></p>
+      <div class="grid grid-cols-4 text-white">
+        <div class="col-span-2">
+          <h5 class="font-medium mb-4">Hire me</h5>
+          <p class="p2 max-w-lg">
+            I'm graduating from Queen's Univeristy in the Spring of 2023 and I'm actively searching for my first big-boy
+            job. If you have an opening in any of these roles, let's chat.
+          </p>
+          <br />
+          <ul class="p2">
+            <li>Frontend Developer</li>
+            <li>Full Stack Developer</li>
+            <li>Software Engineer</li>
+            <li>Product Designer</li>
+          </ul>
+        </div>
+
+        <div>
+          <h5 class="font-medium mb-4">Chat</h5>
+          <p class="p2">hi@benhonda.dev</p>
+          <p class="p2">905.330.5115</p>
+        </div>
+
+        <div>
+          <h5 class="font-medium mb-4">Connect</h5>
+          {% react 'components/SocialIconRow.jsx' true %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="wrapper mt-24 border-t border-white/60 py-4">
+    <div class="flex items-center justify-between text-white/60">
+      <p class="">&copy; benhonda.dev</p>
+      <p class="">Made with ♥️ or whatever.</p>
+    </div>
+  </footer>
+</div>

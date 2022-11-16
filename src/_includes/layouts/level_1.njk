@@ -1,0 +1,32 @@
+---
+layout: "layouts/bedrock.njk"
+---
+
+{% import "macros/header.njk" as header %}
+
+<div class="relative max-w-[120rem] mx-auto">
+  <div id="top"></div>
+  <div class="min-h-[80vh]">
+    <!-- Main content -->
+    {{ content | safe }}
+  </div>
+
+  <footer class="pb-4">
+    <div class="pg-padding">
+      <div class="flex md:flex-row flex-col space-y-2 md:space-y-0 items-center justify-between">
+        <p class="p2 opacity-100 md:opacity-0">&copy; benhonda.dev (beta v0.1)</p>
+        <p class="p2">Made with ♥️ or whatever.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <footer class="pb-4">
+    <div class="pg-padding">
+      <div class="flex md:flex-row flex-col space-y-2 md:space-y-0 items-center justify-end">
+        <p class="p2">Made with ♥️ or whatever.</p>
+      </div>
+    </div>
+  </footer> -->
+
+  <div class="relative">{{ header.menu(data) }}</div>
+</div>

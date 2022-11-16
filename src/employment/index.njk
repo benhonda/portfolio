@@ -1,0 +1,91 @@
+---
+layout: "layouts/level_2.njk"
+title: "Work Experience"
+---
+
+<div>
+  <!-- ================================================= -->
+  <!-- 01 ABOUT -->
+  <!-- ================================================= -->
+  <div class="mt-32 pg-section-2">
+    <div class="pg-padding">
+      <p class="section-label"></p>
+      <h1 class="jumbo h1-max-w">
+        <span class="text-white">Work Experience</span>
+      </h1>
+    </div>
+  </div>
+
+  <!-- ================================================= -->
+  <!-- TABLE -->
+  <!-- ================================================= -->
+  <div class="pg-section">
+    <div class="pg-padding">
+      <div class="border-b border-white/90">
+        {% for item in work_exp.companies %}
+
+        <div class="" x-data="{ open: false }">
+          <button
+            type="button"
+            x-on:click="open = ! open"
+            class="group w-full text-left flex items-start md:items-center justify-start py-6 border-t border-white/90 hover:opacity-80"
+          >
+            <div class="flex-1 md:flex md:items-center">
+              <div class="flex-1">
+                <h3 class="h2 md:h1-sub leading-tight">
+                  <span x-bind:class="! open ? 'transition-colors group-hover:text-white' : 'text-white'"
+                    >{{ item.name }}</span
+                  >
+                </h3>
+              </div>
+
+              <p class="flex-1 section-label-text">{{ item.role }}</p>
+              <p class="mt-4 md:mt-0 flex-1 section-label-text">{{ item.timeline }}</p>
+            </div>
+
+            <div class="flex-shrink-0 transition-colors text-white">
+              <svg
+                x-bind:class="! open ? 'w-12 h-12 md:w-12 md:h-12 transition-transform transform' : 'w-12 h-12 md:w-12 md:h-12 transition-transform transform rotate-45'"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1"
+                stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </div>
+          </button>
+
+          <div x-cloak x-bind:class="! open ? 'overflow-hidden h-0 transition-all' : 'h-auto transition-all'">
+            <!-- start content -->
+            <div class="md:flex space-y-8 md:space-y-0 pt-8 mb-36">
+              <div class="flex-1 min-w-[15rem] lg:min-w-[20rem]">
+                <div class="space-y-8">
+                  {% for stack in item.left_stack %}
+                  <div>
+                    <p class="list-label mb-1">{{ stack.label }}</p>
+                    <p class="p">{{ stack.content }}</p>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+
+              <div class="flex-[2_2_0%] flex items-start justify-start flex-wrap">
+                {% for stack in item.right_stack %}
+                <p class="list-label mb-1">{{ stack.label }}</p>
+                <ul class="pl-5 list-disc list-outside w-full">
+                  {% for point in stack.points %}
+                  <li class="h1-sub h1-max-w">{{ point }}</li>
+                  {% endfor %}
+                </ul>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

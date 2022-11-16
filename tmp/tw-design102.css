@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .wrapper {
+    @apply relative max-w-[100rem] mx-auto px-4 lg:px-8;
+  }
+
+  .wrapper-border {
+    @apply border-t border-white/60 pt-16;
+  }
+
+  .h1 {
+    @apply text-6xl md:text-8xl text-white/90 font-display font-light tracking-tight leading-none;
+  }
+
+  .h2 {
+    @apply text-2xl xl:text-3xl text-white/90 font-sans tracking-tight;
+  }
+
+  .h4 {
+    @apply text-lg text-white/90 font-semibold font-sans;
+  }
+
+  .p {
+    @apply text-lg text-white/90 font-light font-body;
+  }
+
+  .p2 {
+    @apply text-white/70 font-body;
+  }
+
+  .p3 {
+    @apply text-sm text-white/70 font-body;
+  }
+
+  .num {
+    @apply w-16 mt-1.5 flex-shrink-0 text-lg p2 tracking-widest uppercase;
+  }
+
+  .btn-md,
+  .btn {
+    @apply text-xl font-normal text-white h-16 px-8 inline-flex items-center justify-center border-2 border-white rounded-full relative hover:bg-white hover:text-black transition-colors;
+  }
+
+  .grid-1 {
+    /* @apply xl:grid xl:grid-cols-5 xl:gap-16; */
+    @apply grid grid-cols-1 xl:grid-cols-5 xl:gap-16;
+    /* @apply grid gap-12 gap-x-12 grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))]; */
+    /* @apply grid gap-12 gap-x-32 grid-cols-[1fr_minmax(400px,_1fr)]; */
+
+    /* @apply grid gap-12 gap-x-12 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))]; */
+
+  }
+
+  /* .grid-1 > div:nth-child(1) {
+    @apply col-span-2
+  }
+
+  .grid-1 > div:nth-child(2) {
+    @apply col-span-3
+  } */
+
+  /* .cols-left {
+    @apply col-span-2;
+  } */
+
+  .right-col {
+    @apply flex justify-end xl:justify-start;
+  }
+}

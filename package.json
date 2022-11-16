@@ -1,0 +1,29 @@
+{
+  "name": "benhonda.dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:tw": "npx tailwindcss -i ./src/assets/tw.css -o ./_site/assets/tw.css --watch",
+    "build:tw": "NODE_ENV=production npx tailwindcss -i ./src/assets/tw.css -o ./_site/assets/tw.css --minify",
+    "start": "concurrently \"DEBUG=*ERROR* eleventy --serve\" \"npm run start:tw\"",
+    "build": "concurrently \"ELEVENTY_PRODUCTION=true eleventy\" \"npm run build:tw\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ben Honda",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "concurrently": "^6.5.1",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "prettier": "^2.7.1",
+    "require-from-string": "^2.0.2",
+    "sass": "^1.54.9",
+    "tailwindcss": "^3.1.8",
+    "vite": "^2.9.15"
+  }
+}

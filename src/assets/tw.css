@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .jumbo-xl {
+    @apply text-5xl md:text-7xl font-medium font-sans md:font-body leading-normal md:leading-[1];
+  }
+
+  .jumbo {
+    @apply text-4xl md:text-6xl font-normal font-sans md:font-body leading-normal md:leading-[1.15];
+  }
+
+  .h1 {
+    @apply text-2xl md:text-3xl text-zinc-50 dark:text-zinc-900 font-light font-sans md:font-body md:leading-snug;
+  }
+
+  .h1-sub {
+    @apply text-xl md:text-2xl text-zinc-50 dark:text-zinc-900 font-light font-sans md:font-body;
+  }
+
+  .h1-max-w {
+    @apply max-w-xl;
+  }
+
+  .h2 {
+    @apply text-lg md:text-[1rem] md:leading-tight text-zinc-50 dark:text-zinc-900 font-sans;
+  }
+
+  .p {
+    @apply text-zinc-50 dark:text-zinc-900 font-sans;
+  }
+
+  .p1 {
+    @apply text-sm text-zinc-50 dark:text-zinc-900 font-body;
+  }
+
+  .p2 {
+    @apply text-xs text-zinc-50 dark:text-zinc-900 font-body;
+  }
+
+  .pg-padding-ext {
+    @apply relative max-w-[100rem] mx-auto px-4 lg:px-8;
+  }
+
+  .pg-padding {
+    @apply relative max-w-7xl mx-auto px-4 lg:px-8;
+  }
+
+  .pg-section-border {
+    @apply border-t border-zinc-700 dark:border-zinc-300;
+  }
+
+  .section-label {
+    @apply text-sm uppercase tracking-wide font-body text-zinc-400 dark:text-zinc-500 mb-16;
+  }
+
+  .section-label-text {
+    @apply text-sm uppercase tracking-wide font-body text-zinc-400;
+  }
+
+  .list-label {
+    @apply text-[0.8rem] font-semibold uppercase tracking-wide font-body text-zinc-400 dark:text-zinc-500;
+  }
+
+  .pg-section {
+    @apply pt-4 pb-40;
+  }
+
+  .pg-section-intro {
+    @apply pt-4 pb-64;
+  }
+
+  .pg-section-2 {
+    @apply pt-4 pb-20;
+  }
+
+  .desktop-only-block {
+    @apply hidden md:block;
+  }
+
+  .mobile-only-block {
+    @apply block md:hidden;
+  }
+
+  .pg-padding-mobile-expand {
+    /* Edge-to-edge padding on mobile sizes */
+    @apply md:pg-padding;
+  }
+
+  .link,
+  a {
+    @apply font-medium underline hover:opacity-80 transition-opacity;
+  }
+}
