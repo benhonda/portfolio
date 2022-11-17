@@ -26,7 +26,7 @@ social_bar:
 
 quick_about:
   - label: ""
-    content: 
+    content:
       - Ben Honda
       - Burlington, ON
       - bhonda89@gmail.com
@@ -121,12 +121,12 @@ featured_work:
   - img: /assets/images/adapts-prev-2.png
     title: ADAPTS
     link: /projects/adapts/
-    # desc: For the clients of The Adpharm, analytics drive sales. ADAPTS is a URL shortener that enables an omnichannel experience.
-    desc:
-      ADAPTS allows The Adpharm to get specific on which channels are converting
-      and which aren’t. This information is used to optimize the allocation of
-      human and monetary resources, leading to compounded results on top
-      performers and minified losses on the losers.
+    desc: The analytics tool that powers an omnichannel agency.
+    # desc:
+    #   ADAPTS allows The Adpharm to get specific on which channels are converting
+    #   and which aren’t. This information is used to optimize the allocation of
+    #   human and monetary resources, leading to compounded results on top
+    #   performers and minified losses on the losers.
   - img: /assets/images/pm-prev-1.png
     title: Portal Manager
     link: /projects/portal-manager/

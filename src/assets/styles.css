@@ -1,5 +1,5 @@
 body {
-  background: url("/assets/images/bgNoise1.svg");
+  /* background: url("/assets/images/bgNoise1.svg"); */
 }
 
 [x-cloak] {
@@ -7,188 +7,87 @@ body {
 }
 
 /**
- * @license
- *
- * Font Family: Satoshi
- * Designed by: Deni Anggara
- * URL: https://www.fontshare.com../assets/fonts/satoshi
- * © 2022 Indian Type Foundry
- *
- * Font Styles:
- * Satoshi Variable(Variable font)
- * Satoshi Variable Italic(Variable font)
- * Satoshi Light
- * Satoshi Light Italic
- * Satoshi Regular
- * Satoshi Italic
- * Satoshi Medium
- * Satoshi Medium Italic
- * Satoshi Bold
- * Satoshi Bold Italic
- * Satoshi Black
- * Satoshi Black Italic
- *
-*/
-
-/**
-* This is a variable font
-* You can controll variable axes as shown below:
-* font-variation-settings: 'wght' 900.0;
 *
-* available axes:
-
-* 'wght' (range from 300.0 to 900.0)
-
 */
-
 @font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Variable.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Variable.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Variable.ttf") format("truetype");
-  font-weight: 300 900;
-  font-display: swap;
-  font-style: normal;
-}
-
-/**
-* This is a variable font
-* You can controll variable axes as shown below:
-* font-variation-settings: 'wght' 900.0;
-*
-* available axes:
-
-* 'wght' (range from 300.0 to 900.0)
-
-*/
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-VariableItalic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-VariableItalic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-VariableItalic.ttf") format("truetype");
-  font-weight: 300 900;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Light.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Light.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Light.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-LightItalic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-LightItalic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-LightItalic.ttf") format("truetype");
-  font-weight: 300;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Regular.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Regular.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Italic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Italic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Italic.ttf") format("truetype");
-  font-weight: 400;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Medium.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Medium.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-MediumItalic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-MediumItalic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-MediumItalic.ttf") format("truetype");
-  font-weight: 500;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Bold.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Bold.woff") format("woff"), url("../assets/fonts/Satoshi-Bold.ttf") format("truetype");
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-Bold.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-Bold.woff") format("woff"),
+    url("../assets/fonts/Satoshi-Bold.otf") format("opentype");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-BoldItalic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-BoldItalic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-display: swap;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-Black.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-Black.woff") format("woff"),
-    url("../assets/fonts/Satoshi-Black.ttf") format("truetype");
-  font-weight: 900;
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-Light.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-Light.woff") format("woff"),
+    url("../assets/fonts/Satoshi-Light.otf") format("opentype");
+  font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Satoshi";
-  src: url("../assets/fonts/Satoshi-BlackItalic.woff2") format("woff2"),
-    url("../assets/fonts/Satoshi-BlackItalic.woff") format("woff"),
-    url("../assets/fonts/Satoshi-BlackItalic.ttf") format("truetype");
-  font-weight: 900;
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-Medium.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-Medium.woff") format("woff"),
+    url("../assets/fonts/Satoshi-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-MediumItalic.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-MediumItalic.woff") format("woff"),
+    url("../assets/fonts/Satoshi-MediumItalic.otf") format("opentype");
+  font-weight: 500;
   font-display: swap;
   font-style: italic;
 }
 
+@font-face {
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-Regular.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-Regular.woff") format("woff"),
+    url("../assets/fonts/Satoshi-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "S";
+  src: url("../assets/fonts/SFProText-RegularItalic.woff2") format("woff2"),
+    url("../assets/fonts/SFProText-RegularItalic.woff") format("woff"),
+    url("../assets/fonts/Satoshi-RegularItalic.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
 /**
- * @license
- *
- * Font Family: Clash Display
- * Designed by: Indian Type Foundry
- * URL: https://www.fontshare.com/fonts/clash-display
- * © 2022 Indian Type Foundry
- *
- * Font Styles:
- * Clash Display Variable(Variable font)
- * Clash Display Extralight
- * Clash Display Light
- * Clash Display Regular
- * Clash Display Medium
- * Clash Display Semibold
- * Clash Display Bold
- *
+* This is a variable font
+* You can controll variable axes as shown below:
+* font-variation-settings: 'wght' 700.0;
+*
+* available axes:
+
+* 'wght' (range from 300.0 to 700.0)
+
 */
+
+@font-face {
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Variable.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Variable.woff") format("woff"),
+    url("../assets/fonts/Tabular-Variable.ttf") format("truetype");
+  font-weight: 300 700;
+  font-display: swap;
+  font-style: normal;
+}
 
 /**
 * This is a variable font
@@ -197,76 +96,66 @@ body {
 *
 * available axes:
 
-* 'wght' (range from 200.0 to 700.0)
+* 'wght' (range from 300.0 to 700.0)
 
 */
 
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Variable.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Variable.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Variable.ttf") format("truetype");
-  font-weight: 200 700;
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-VariableItalic.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-VariableItalic.woff") format("woff"),
+    url("../assets/fonts/Tabular-VariableItalic.ttf") format("truetype");
+  font-weight: 300 700;
   font-display: swap;
-  font-style: normal;
+  font-style: italic;
 }
 
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Extralight.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Extralight.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Extralight.ttf") format("truetype");
-  font-weight: 200;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Light.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Light.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Light.ttf") format("truetype");
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Light.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Light.woff") format("woff"),
+    url("../assets/fonts/Tabular-Light.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Regular.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Regular.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Regular.ttf") format("truetype");
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Regular.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Regular.woff") format("woff"),
+    url("../assets/fonts/Tabular-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Medium.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Medium.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Medium.ttf") format("truetype");
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Italic.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Italic.woff") format("woff"),
+    url("../assets/fonts/Tabular-Italic.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Medium.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Medium.woff") format("woff"),
+    url("../assets/fonts/Tabular-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Semibold.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Semibold.ttf") format("truetype");
+  font-family: "Tabular";
+  src: url("../assets/fonts/Tabular-Semibold.woff2") format("woff2"),
+    url("../assets/fonts/Tabular-Semibold.woff") format("woff"),
+    url("../assets/fonts/Tabular-Semibold.ttf") format("truetype");
   font-weight: 600;
-  font-display: swap;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "ClashDisplay";
-  src: url("../assets/fonts/ClashDisplay-Bold.woff2") format("woff2"),
-    url("../assets/fonts/ClashDisplay-Bold.woff") format("woff"),
-    url("../assets/fonts/ClashDisplay-Bold.ttf") format("truetype");
-  font-weight: 700;
   font-display: swap;
   font-style: normal;
 }

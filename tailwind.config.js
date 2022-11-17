@@ -4,10 +4,8 @@ module.exports = {
   darkMode: "class",
   theme: {
     fontFamily: {
-      // sans: ["ui-sans-serif", "system-ui"],
-      sans: ["Satoshi", "ui-sans-serif", "system-ui"],
-      body: ["ui-sans-serif", "system-ui"],
-      display: ["ClashDisplay", "ui-sans-serif", "system-ui"],
+      sans: ["S", "ui-sans-serif", "system-ui"],
+      serif: ["Tabular", "ui-sans-serif", "system-ui"],
     },
     extend: {
       cursor: {

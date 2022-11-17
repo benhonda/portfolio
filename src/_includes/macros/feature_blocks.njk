@@ -4,16 +4,16 @@
   <div class="pg-padding">
     <p class="section-label">Featured Articles</p>
 
-    <div class="md:border-t border-white/90">
+    <div class="md:border-t border-white/30">
       {% for item in data.featured_articles %}
 
-      <a href="#" class="pointer-events-none flex items-center justify-start py-6 md:border-b border-white/90">
+      <a href="#" class="pointer-events-none flex items-center justify-start py-7 md:border-b border-white/30 no-underline">
         <div class="flex-1">
           <div class="max-w-[16rem] md:max-w-full">
-            <p class="p2 mb-1">{{ item.type }}</p>
-            <h3 class="h2 opacity-80 md:h1 leading-tight">
+            <p class="section-label-text mb-2 font-normal">{{ item.type }} (coming soon)</p>
+            <h3 class="h1-sub opacity-80 leading-tight">
               <!-- <span class="text-white">{{ item.title }}</span> -->
-              {{ item.title }} (coming soon)
+              {{ item.title }}
             </h3>
           </div>
         </div>
@@ -70,33 +70,31 @@
     {% endfor %} #}
     <!--  -->
     {% for item in data.featured_work %}
-    <div class="pg-padding">
-      <div class="flex justify-start items-end space-x-12">
-        <!-- <div class="flex-1 min-w-[15rem] lg:min-w-[20rem]"></div> -->
-        <div class="flex-[3_3_0%]">
-          <a href="{{ item.link }}" class="block">
-            <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full object-contain" />
-          </a>
-          <div class="mt-8">
-            <h3 class="p1 font-bold">
+    <div>
+      <div class="pg-padding-ext">
+        <a href="{{ item.link }}" class="block">
+          <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full object-contain" />
+        </a>
+
+        <div class="pg-padding mt-20 space-y-2">
+          <h3 class="h1 flex items-center">
+            <span class="mr-3">
               {{ item.title }}
-            </h3>
-            <p class="p1 opacity-70 mt-2 max-w-md">
-              {{ item.desc }}
-            </p>
-            <p class="p1 mt-2">
-              <a href="{{ item.link }}" class="flex items-center space-x-0.5">
-                <span>View case study</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 mt-px">
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-            </p>
-          </div>
+            </span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-9 h-9"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+            </svg>
+          </h3>
+          <p class="h1-gray font-light max-w-2xl">
+            {{ item.desc }}
+          </p>
         </div>
       </div>
     </div>

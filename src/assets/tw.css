@@ -4,39 +4,51 @@
 
 @layer components {
   .jumbo-xl {
-    @apply text-5xl md:text-7xl font-medium font-sans md:font-body leading-normal md:leading-[1];
+    @apply text-5xl md:text-7xl font-medium   leading-normal md:leading-[1];
   }
 
   .jumbo {
-    @apply text-4xl md:text-6xl font-normal font-sans md:font-body leading-normal md:leading-[1.15];
+    @apply text-4xl md:text-6xl font-normal   leading-normal md:leading-[1.15];
+  }
+
+  .menu-title {
+    @apply text-2xl md:text-2xl text-zinc-50 dark:text-zinc-900 md:leading-tight font-light;
   }
 
   .h1 {
-    @apply text-2xl md:text-3xl text-zinc-50 dark:text-zinc-900 font-light font-sans md:font-body md:leading-snug;
+    @apply text-2xl md:text-4xl text-zinc-50 dark:text-zinc-900 md:leading-tight font-light;
+  }
+
+  .h1-gray {
+    @apply text-2xl md:text-4xl text-zinc-500 md:leading-tight;
   }
 
   .h1-sub {
-    @apply text-xl md:text-2xl text-zinc-50 dark:text-zinc-900 font-light font-sans md:font-body;
+    @apply text-xl md:text-2xl text-zinc-50 dark:text-zinc-900 font-light;
   }
 
   .h1-max-w {
-    @apply max-w-xl;
+    @apply max-w-2xl;
   }
 
   .h2 {
-    @apply text-lg md:text-[1rem] md:leading-tight text-zinc-50 dark:text-zinc-900 font-sans;
+    @apply text-lg md:text-[1rem] md:leading-tight text-zinc-50 dark:text-zinc-900;
   }
 
   .p {
-    @apply text-zinc-50 dark:text-zinc-900 font-sans;
+    @apply text-zinc-50 dark:text-zinc-900;
+  }
+
+  .tag {
+    @apply font-serif tracking-wider text-zinc-50 dark:text-zinc-900;
   }
 
   .p1 {
-    @apply text-sm text-zinc-50 dark:text-zinc-900 font-body;
+    @apply text-sm text-zinc-50 dark:text-zinc-900;
   }
 
   .p2 {
-    @apply text-xs text-zinc-50 dark:text-zinc-900 font-body;
+    @apply text-xs text-zinc-50 dark:text-zinc-900;
   }
 
   .pg-padding-ext {
@@ -52,15 +64,15 @@
   }
 
   .section-label {
-    @apply text-sm uppercase tracking-wide font-body text-zinc-400 dark:text-zinc-500 mb-16;
+    @apply font-serif text-sm uppercase tracking-widest text-zinc-400 dark:text-zinc-500 mb-16;
   }
 
   .section-label-text {
-    @apply text-sm uppercase tracking-wide font-body text-zinc-400;
+    @apply font-serif text-sm uppercase tracking-widest  text-zinc-400;
   }
 
   .list-label {
-    @apply text-[0.8rem] font-semibold uppercase tracking-wide font-body text-zinc-400 dark:text-zinc-500;
+    @apply font-serif text-[0.8rem] font-semibold uppercase tracking-widest  text-zinc-400 dark:text-zinc-500;
   }
 
   .pg-section {

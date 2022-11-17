@@ -13,16 +13,14 @@ title: "Home"
   <!-- 01 ABOUT -->
   <!-- ================================================= -->
   <!-- <div id="about" class="mt-32 pg-section"> -->
-  <div id="about" class="mt-32 pg-section">
+  <div id="about" class="mt-32 pg-section-2">
     <div class="pg-padding">
       <div class="flex space-x-12 items-start justify-start">
         <div class="flex-[3_3_0%]">
-          <p class="section-label">Welcome</p>
-          <h1 class="h1">
-            <span class="font-semibold">Hi, I'm Ben.</span>
-
-            I'm 23. I'm from Ontario Canada. I design and build software products, mostly websites. I've worked on
-            projects used by millions&mdash;maybe even one that you've used (probably not).
+          <p class="section-label">Hi, I'm Ben Honda</p>
+          <h1 class="h1 h1-max-w">
+            <!-- <span class="font-semibold">Hi, I'm Ben.</span> -->
+            I build websites and apps for a living... <span class="underline">but I'd do it for free</span>*
 
             <!-- A fourth-year
             computer science student at Queen’s University actively pursuing
@@ -30,11 +28,11 @@ title: "Home"
             easy to use applications for the web and mobile, and I’ve done so
             for companies big and small. -->
           </h1>
-          <p class="h2 mt-12">
+          <!-- <p class="h2 text-zinc-500 mt-12">
             I'm on the hunt for new opportunities.
             <a href="{{ data.resume_link }}" download class="text-white">Download my resume</a> or
             <a href="#contact" class="text-white">contact me</a> or take a scroll.
-          </p>
+          </p> -->
         </div>
 
         <!-- ================================================= -->
@@ -78,36 +76,44 @@ title: "Home"
     </div>
   </div>
 
+  <div class="pg-padding">
+    <div class="flex justify-start">
+      <p class="p2 mb-4">*&nbsp;(hypothetically)</p>
+    </div>
+  </div>
+
   <!-- ================================================= -->
   <!-- 02 EXPERIENCE (Mobile) -->
   <!-- ================================================= -->
-  <div id="experience" class="mobile-only-block pg-section pg-section-border">
-    <div class="pg-padding">
-      <p class="section-label">02 • Experience</p>
+  <div class="pg-padding">
+    <div id="experience" class="mobile-only-block pg-section pg-section-border">
+      <div>
+        <p class="section-label">02 • Experience</p>
 
-      <div class="space-y-6">
-        {% for item in data.work_exp %}
-        <p class="h2">
-          <span class="text-white font-medium">{{ item.company }}</span>
-          <br />
-          {{ item.role }}
-          <br />
-          {{ item.type }}
-        </p>
-        {% endfor %}
+        <div class="space-y-6">
+          {% for item in data.work_exp %}
+          <p class="h2">
+            <span class="text-white font-medium">{{ item.company }}</span>
+            <br />
+            {{ item.role }}
+            <br />
+            {{ item.type }}
+          </p>
+          {% endfor %}
 
-        <p class="pt-6 h2 text-white">
-          <a href="/employment/" class="inline-flex items-center hover:underline">
-            <span class="mr-1">Learn more</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-              <path
-                fill-rule="evenodd"
-                d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </a>
-        </p>
+          <p class="pt-6 h2 text-white">
+            <a href="/employment/" class="inline-flex items-center hover:underline">
+              <span class="mr-1">Learn more</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
@@ -168,7 +174,7 @@ title: "Home"
   <!-- ================================================= -->
   <div id="contact" class="pg-section-2 pg-section-border">
     <div class="pg-padding">
-      <p class="section-label">Contact me</p>
+      <p class="section-label">Contact</p>
 
       <div class="flex space-x-12 items-start justify-start">
         <div class="flex-[3_3_0%]">
@@ -192,7 +198,7 @@ title: "Home"
         </div>
       </div>
 
-      <div class="mt-24 flex items-start justify-start">
+      <div class="mt-24 md:mt-32 flex items-start justify-start">
         <div class="flex-1 max-w-2xl">{{ footer_links.footer_row(data) }}</div>
 
         <div class="mobile-only-block flex-shrink-0">
