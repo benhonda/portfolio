@@ -1,106 +1,74 @@
 <!-- Articles -->
 {% macro articles(data) %}
-<div class="pg-section pg-section-border">
-  <div class="pg-padding">
-    <p class="section-label">Featured Articles</p>
 
-    <div class="md:border-t border-white/30">
-      {% for item in data.featured_articles %}
+<div class="md:border-t border-white/30">
+  {% for item in data.featured_articles %}
 
-      <a href="#" class="pointer-events-none flex items-center justify-start py-7 md:border-b border-white/30 no-underline">
-        <div class="flex-1">
-          <div class="max-w-[16rem] md:max-w-full">
-            <p class="section-label-text mb-2 font-normal">{{ item.type }} (coming soon)</p>
-            <h3 class="h1-sub opacity-80 leading-tight">
-              <!-- <span class="text-white">{{ item.title }}</span> -->
-              {{ item.title }}
-            </h3>
-          </div>
-        </div>
-
-        <div class="flex-shrink-0 text-white/70">
-          <svg
-            class="w-16 h-16"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="currentColor"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </div>
-      </a>
-
-      {% endfor %}
+  <a href="#" class="pointer-events-none flex items-center justify-start py-7 md:border-b border-white/30 no-underline">
+    <div class="flex-1">
+      <div class="max-w-[16rem] md:max-w-full">
+        <p class="section-label-text mb-2 font-normal">{{ item.type }} (coming soon)</p>
+        <h3 class="h1 opacity-80 leading-tight">
+          <!-- <span class="text-white">{{ item.title }}</span> -->
+          {{ item.title }}
+        </h3>
+      </div>
     </div>
-  </div>
+
+    <div class="flex-shrink-0 text-white/70">
+      <svg
+        class="w-16 h-16"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+      </svg>
+    </div>
+  </a>
+
+  {% endfor %}
 </div>
+
 {% endmacro %}
 
 <!-- Projects -->
 {% macro projects(data) %}
-<div class="pg-section pg-section-border">
-  <div class="pg-padding">
-    <p class="section-label">Featured Work</p>
-  </div>
-  <div class="space-y-24 md:space-y-56">
-    {# {% for item in data.featured_work %}
-    <div>
-      <div class="mb-8 mt-12">
-        <div class="flex items-start space-x-24">
-          <div class="flex-shrink-0 min-w-[10rem]">
-            <h3 class="p1 font-bold">
-              {{ item.title }}
-            </h3>
-          </div>
-          <div class="flex-1 max-w-sm">
-            <p class="p1 opacity-70">
-              {{ item.desc }}
-            </p>
-          </div>
-          <div class="flex-1"></div>
-        </div>
-      </div>
 
+<div class="space-y-24 md:space-y-56">
+  {% for item in data.featured_work %}
+  <div>
+    <div class="pg-padding-ext">
       <a href="{{ item.link }}" class="block">
         <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full object-contain" />
       </a>
-    </div>
-    {% endfor %} #}
-    <!--  -->
-    {% for item in data.featured_work %}
-    <div>
-      <div class="pg-padding-ext">
-        <a href="{{ item.link }}" class="block">
-          <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full object-contain" />
-        </a>
 
-        <div class="pg-padding mt-20 space-y-2">
-          <h3 class="h1 flex items-center">
-            <span class="mr-3">
-              {{ item.title }}
-            </span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-9 h-9"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-            </svg>
-          </h3>
-          <p class="h1-gray font-light max-w-2xl">
-            {{ item.desc }}
-          </p>
-        </div>
+      <div class="pg-padding mt-20 space-y-2">
+        <a href="{{ item.link }}" class="h1 no-underline inline-flex items-center">
+          <span class="mr-3">
+            {{ item.title }}
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-9 h-9"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+        <p class="h1-gray font-light max-w-2xl">
+          {{ item.desc }}
+        </p>
       </div>
     </div>
-    {% endfor %}
-    <!--  -->
   </div>
+  {% endfor %}
+  <!--  -->
 </div>
 
 {% endmacro %}

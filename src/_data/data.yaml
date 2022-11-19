@@ -16,7 +16,7 @@ social_bar:
   # - title: ""
   #   content: ""
   - title: Email
-    content: hi@benhonda.dev
+    content: bhonda89@gmail.com
   - title: LinkedIn
     content: benhonda/
     href: "https://www.linkedin.com/in/benhonda/"
@@ -118,7 +118,7 @@ work_exp:
     type: Co-Op (5 months)
 
 featured_work:
-  - img: /assets/images/adapts-prev-2.png
+  - img: /assets/images/adapts-banner.png
     title: ADAPTS
     link: /projects/adapts/
     desc: The analytics tool that powers an omnichannel agency.
@@ -127,7 +127,7 @@ featured_work:
     #   and which aren’t. This information is used to optimize the allocation of
     #   human and monetary resources, leading to compounded results on top
     #   performers and minified losses on the losers.
-  - img: /assets/images/pm-prev-1.png
+  - img: /assets/images/pm-banner.png
     title: Portal Manager
     link: /projects/portal-manager/
     desc:
@@ -136,7 +136,7 @@ featured_work:
       than ever.
 
 featured_articles:
-  - title: How to make great apps
+  - title: A philosophy for building great apps
     type: Bottomless collection
   - title: Building a static site generator from scratch
     type: Case Study
@@ -181,9 +181,9 @@ resume_link: "/assets/cv/nov2022/BenHonda_SoftwareDeveloper_Resume.pdf"
 links:
   - title: Home
     url: "/"
-  - title: Work Experience
+  - title: Employment
     url: "/employment/"
-  - title: Projects
+  - title: Work
     url: "/projects/"
   - title: Blog
     url: "/blog/"

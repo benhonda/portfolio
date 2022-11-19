@@ -1,10 +1,37 @@
 {% import "macros/footer_links.njk" as footer_links %}
 
 <!--  -->
-{% macro menu(data) %}
-<header>
+{% macro menu(data, page) %}
+<header
+  x-data="{
+    scrolledFromTop: false
+  }"
+  x-init="window.pageYOffset >= 100 ? scrolledFromTop = true : scrolledFromTop = false"
+  @scroll.window="window.pageYOffset >= 100 ? scrolledFromTop = true : scrolledFromTop = false"
+>
   <!-- Brand here -->
+
   <a
+    x-cloak
+    href="/"
+    class="no-underline fixed top-6 left-4 lg:left-8 mix-blend-difference group z-50 menu-title font-medium text-white flex items-center space-x-1"
+  >
+    {% if page.fileSlug == "" %}
+    <span
+      class="text-[10rem] transition-all text-white font-normal tracking-tighter leading-[0.9]"
+      :class="scrolledFromTop ? 'text-3xl' : 'text-[10rem]'"
+    >
+      bh
+    </span>
+    {% else %}
+    <div class="w-5 md:w-6 h-0.5 bg-white"></div>
+    <span class="menu-title font-medium">bh</span>
+    {% endif %}
+  </a>
+
+  {#
+  <!-- This is the animated one -->
+  <!-- <a
     href="/"
     class="fixed top-6 left-4 lg:left-8 mix-blend-difference group z-50 menu-title font-medium text-white flex items-center space-x-1"
   >
@@ -21,13 +48,63 @@
         benhonda.dev
       </span>
     </div>
-  </a>
+  </a> -->
+  #}
 
   <!-- Fake button -->
-  <div class="mix-blend-difference fixed top-6 right-4 lg:right-8 flex items-center space-x-4">
-    <button class="font-medium font-serif menu-title transition-opacity md:hover:opacity-70">
-      <span class="text-white"> Menu </span>
-    </button>
+  <div class="mix-blend-difference fixed top-6 right-4 lg:right-8">
+    <div class="flex items-center space-x-0 md:space-x-8">
+      {% for navitem in data.links %}
+      <a
+        href="{{ navitem.url }}"
+        class="menu-links inline-flex items-center {% if (navitem.url == '/' + page.fileSlug + '/') or (navitem.url == '/' and page.fileSlug == '') %}underline{% else %}no-underline{% endif %}"
+        x-show="! scrolledFromTop"
+        x-transition:enter="transition ease-in-out duration-300 delay-300 transform"
+        x-transition:enter-start="-translate-y-16"
+        x-transition:enter-end="translate-y-0"
+        x-transition:leave="transition ease-in-out duration-300 transform"
+        x-transition:leave-start="translate-y-0"
+        x-transition:leave-end="-translate-y-16"
+      >
+        <span>
+          {{ navitem.title }}
+        </span>
+        {% if navitem.download %}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="ml-2 h-5 w-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"
+          />
+        </svg>
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+
+    <div
+      x-cloak
+      x-show="scrolledFromTop"
+      x-transition:enter="transition ease-in-out duration-300 delay-300 transform"
+      x-transition:enter-start="-translate-y-24"
+      x-transition:enter-end="translate-y-0"
+      x-transition:leave="transition ease-in-out duration-300 transform"
+      x-transition:leave-start="translate-y-0"
+      x-transition:leave-end="-translate-y-24"
+    >
+      <button
+        class="absolute top-0 right-0 text-right menu-menu-link font-medium transition-opacity md:hover:opacity-70"
+      >
+        <span class="text-white">Menu</span>
+      </button>
+    </div>
   </div>
 
   <!-- Real button -->
@@ -150,7 +227,12 @@
       </div>
     </div>
 
-    <button x-on:click="toggle()" class="font-medium menu-title transition-opacity md:hover:opacity-70">
+    <button
+      x-cloak
+      x-show="scrolledFromTop"
+      x-on:click="toggle()"
+      class="menu-menu-link transition-opacity md:hover:opacity-70"
+    >
       <span class="text-transparent">Menu</span>
     </button>
   </div>

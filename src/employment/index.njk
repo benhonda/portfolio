@@ -74,7 +74,7 @@ title: "Work Experience"
               <div class="flex-[2_2_0%] flex items-start justify-start flex-wrap">
                 {% for stack in item.right_stack %}
                 <p class="list-label mb-1">{{ stack.label }}</p>
-                <ul class="pl-5 list-disc list-outside w-full">
+                <ul class="pl-5 list-disc list-outside w-full space-y-3">
                   {% for point in stack.points %}
                   <li class="h1-sub h1-max-w">{{ point }}</li>
                   {% endfor %}

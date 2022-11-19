@@ -15,6 +15,14 @@
     @apply text-2xl md:text-2xl text-zinc-50 dark:text-zinc-900 md:leading-tight font-light;
   }
 
+  .menu-menu-link {
+    @apply text-2xl md:text-2xl text-zinc-50 dark:text-zinc-900 tracking-wide font-serif;
+  }
+
+  .menu-links {
+    @apply text-zinc-50 dark:text-zinc-900 tracking-wide font-serif;
+  }
+
   .h1 {
     @apply text-2xl md:text-4xl text-zinc-50 dark:text-zinc-900 md:leading-tight font-light;
   }
@@ -29,6 +37,10 @@
 
   .h1-max-w {
     @apply max-w-2xl;
+  }
+
+  .max-w-content-1 {
+    @apply max-w-3xl;
   }
 
   .h2 {
@@ -85,6 +97,10 @@
 
   .pg-section-2 {
     @apply pt-4 pb-20;
+  }
+
+  .pg-section-3 {
+    @apply pt-4 pb-10;
   }
 
   .desktop-only-block {

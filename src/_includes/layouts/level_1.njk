@@ -12,10 +12,10 @@ layout: "layouts/bedrock.njk"
   </div>
 
   <footer class="pb-4">
-    <div class="pg-padding">
+    <div class="pg-padding-ext">
       <div class="flex md:flex-row flex-col space-y-2 md:space-y-0 items-center justify-between">
-        <p class="p2 opacity-100">{% if page.fileSlug == "" %} &copy; benhonda.dev (beta v0.1) {% endif %}</p>
-        <p class="p2">Made with ♥️ or whatever.</p>
+        <p class="p2 text-zinc-500">{% if page.fileSlug == "" %} &copy; benhonda.dev (updated Nov 2022) {% endif %}</p>
+        <p class="p2 text-zinc-500">Made with ♥️ or whatever</p>
       </div>
     </div>
   </footer>
@@ -28,5 +28,7 @@ layout: "layouts/bedrock.njk"
     </div>
   </footer> -->
 
-  <div class="relative">{{ header.menu(data) }}</div>
+  <div class="relative">
+    {{ header.menu(data, page) }}
+  </div>
 </div>
