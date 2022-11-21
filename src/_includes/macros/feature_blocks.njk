@@ -4,15 +4,22 @@
 <div class="md:border-t border-white/30">
   {% for item in data.featured_articles %}
 
-  <a href="#" class="pointer-events-none flex items-center justify-start py-7 md:border-b border-white/30 no-underline">
+  <a
+    href="#"
+    class="pointer-events-none flex items-center justify-start py-7 md:border-b border-white/30 no-underline md:space-x-12"
+  >
     <div class="flex-1">
       <div class="max-w-[16rem] md:max-w-full">
-        <p class="section-label-text mb-2 font-normal">{{ item.type }} (coming soon)</p>
-        <h3 class="h1 opacity-80 leading-tight">
+        <p class="mobile-only-block section-label-text mb-2 font-normal">{{ item.type }} (coming soon)</p>
+        <h3 class="h1-sub opacity-80 leading-tight">
           <!-- <span class="text-white">{{ item.title }}</span> -->
           {{ item.title }}
         </h3>
       </div>
+    </div>
+
+    <div class="desktop-only-block flex-1">
+      <p class="section-label-text font-normal">{{ item.type }} (coming soon)</p>
     </div>
 
     <div class="flex-shrink-0 text-white/70">
@@ -44,27 +51,27 @@
       <a href="{{ item.link }}" class="block">
         <img src="{{ item.img }}" alt="{{ item.title }}" class="w-full object-contain" />
       </a>
+    </div>
 
-      <div class="pg-padding mt-20 space-y-2">
-        <a href="{{ item.link }}" class="h1 no-underline inline-flex items-center">
-          <span class="mr-3">
-            {{ item.title }}
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-9 h-9"
-          >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-          </svg>
-        </a>
-        <p class="h1-gray font-light max-w-2xl">
-          {{ item.desc }}
-        </p>
-      </div>
+    <div class="pg-padding mt-8 md:mt-20 space-y-2">
+      <a href="{{ item.link }}" class="h1 no-underline inline-flex items-center">
+        <span class="mr-3">
+          {{ item.title }}
+        </span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-9 h-9"
+        >
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+      <p class="h1-gray font-light max-w-2xl">
+        {{ item.desc }}
+      </p>
     </div>
   </div>
   {% endfor %}

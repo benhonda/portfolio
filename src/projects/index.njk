@@ -3,20 +3,16 @@ layout: "layouts/level_2.njk"
 title: "Projects"
 ---
 
+<!--  -->
 {% from "macros/feature_blocks.njk" import projects %}
+<!--  -->
+{% import "macros/secondary_page_blocks.njk" as blocks %}
 
 <div>
   <!-- ================================================= -->
   <!-- 01 ABOUT -->
   <!-- ================================================= -->
-  <div class="mt-32 pg-section-2">
-    <div class="pg-padding">
-      <p class="section-label"></p>
-      <h1 class="jumbo h1-max-w">
-        <span class="text-white">Featured Projects</span>
-      </h1>
-    </div>
-  </div>
+  {{ blocks.big_intro(title="Featured Projects") }}
 
   <div class="pg-section">
     {{ projects(data) }}

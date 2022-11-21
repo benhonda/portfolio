@@ -4,7 +4,18 @@
 {% macro menu(data, page) %}
 <header
   x-data="{
-    scrolledFromTop: false
+    scrolledFromTop: false,
+    menuOpen: false,
+    menuToggle() {
+      if (this.menuOpen) return this.menuClose()
+
+      this.menuOpen = true
+    },
+    menuClose() {
+      if (! this.menuOpen) return
+
+      this.menuOpen = false
+    },
   }"
   x-init="window.pageYOffset >= 100 ? scrolledFromTop = true : scrolledFromTop = false"
   @scroll.window="window.pageYOffset >= 100 ? scrolledFromTop = true : scrolledFromTop = false"
@@ -19,7 +30,7 @@
     {% if page.fileSlug == "" %}
     <span
       class="text-[10rem] transition-all text-white font-normal tracking-tighter leading-[0.9]"
-      :class="scrolledFromTop ? 'text-3xl' : 'text-[10rem]'"
+      :class="scrolledFromTop || menuOpen ? 'text-3xl' : 'text-[10rem]'"
     >
       bh
     </span>
@@ -51,18 +62,25 @@
   </a> -->
   #}
 
-  <!-- Fake button -->
-  <div class="mix-blend-difference fixed top-6 right-4 lg:right-8">
+  <!-- Fake button (MOBILE) -->
+  <div class="mobile-only-block mix-blend-difference fixed top-6 right-4 lg:right-8">
+    <button class="absolute top-0 right-0 text-right menu-menu-link font-medium transition-opacity md:hover:opacity-70">
+      <span class="text-white">Menu</span>
+    </button>
+  </div>
+
+  <!-- Fake button (DESKTOP) -->
+  <div class="desktop-only-block mix-blend-difference fixed top-7 right-4 lg:right-8">
     <div class="flex items-center space-x-0 md:space-x-8">
       {% for navitem in data.links %}
       <a
         href="{{ navitem.url }}"
         class="menu-links inline-flex items-center {% if (navitem.url == '/' + page.fileSlug + '/') or (navitem.url == '/' and page.fileSlug == '') %}underline{% else %}no-underline{% endif %}"
         x-show="! scrolledFromTop"
-        x-transition:enter="transition ease-in-out duration-300 delay-300 transform"
+        x-transition:enter="transition ease-in-out duration-300 delay-200 transform"
         x-transition:enter-start="-translate-y-16"
         x-transition:enter-end="translate-y-0"
-        x-transition:leave="transition ease-in-out duration-300 transform"
+        x-transition:leave="transition ease-in-out duration-100 transform"
         x-transition:leave-start="translate-y-0"
         x-transition:leave-end="-translate-y-16"
       >
@@ -92,15 +110,15 @@
     <div
       x-cloak
       x-show="scrolledFromTop"
-      x-transition:enter="transition ease-in-out duration-300 delay-300 transform"
+      x-transition:enter="transition ease-in-out duration-300 delay-200 transform"
       x-transition:enter-start="-translate-y-24"
       x-transition:enter-end="translate-y-0"
-      x-transition:leave="transition ease-in-out duration-300 transform"
+      x-transition:leave="transition ease-in-out duration-100 transform"
       x-transition:leave-start="translate-y-0"
       x-transition:leave-end="-translate-y-24"
     >
       <button
-        class="absolute top-0 right-0 text-right menu-menu-link font-medium transition-opacity md:hover:opacity-70"
+        class="absolute -top-2 right-0 text-right menu-menu-link font-medium transition-opacity md:hover:opacity-70"
       >
         <span class="text-white">Menu</span>
       </button>
@@ -110,27 +128,14 @@
   <!-- Real button -->
   <div
     class="fixed top-6 right-4 lg:right-8 flex items-center space-x-4"
-    x-data="{
-      open: false,
-      toggle() {
-        if (this.open) return this.close()
-
-        this.open = true
-      },
-      close() {
-        if (! this.open) return
-
-        this.open = false
-      },
-    }"
-    x-on:keydown.escape.prevent.stop="close()"
+    x-on:keydown.escape.prevent.stop="menuClose()"
   >
     <!-- The Menu -->
-    <div x-cloak x-show="open">
+    <div x-cloak x-show="menuOpen">
       <div class="fixed top-0 left-0 h-screen w-screen">
         <!-- Black BG -->
         <div
-          x-show="open"
+          x-show="menuOpen"
           x-transition:enter="transition-opacity ease-linear duration-300"
           x-transition:enter-start="opacity-0"
           x-transition:enter-end="opacity-100"
@@ -143,8 +148,8 @@
 
         <!-- Content -->
         <div
-          x-show="open"
-          x-on:click.outside="close()"
+          x-show="menuOpen"
+          x-on:click.outside="menuClose()"
           x-transition:enter="transition ease-in-out duration-700 transform"
           x-transition:enter-start="-translate-y-full"
           x-transition:enter-end="translate-y-0"
@@ -155,7 +160,7 @@
           <div class="dark relative">
             <div class="relative bg-zinc-100 shadow-2xl text-zinc-900 max-h-screen overflow-y-scroll">
               <div class="flex justify-end pt-4 pr-4">
-                <button type="button" class="hover:opacity-80" x-on:click="close()">
+                <button type="button" class="hover:opacity-80" x-on:click="menuClose()">
                   <span class="sr-only">Close sidebar</span>
 
                   <svg
@@ -213,9 +218,10 @@
                 </div>
 
                 <!-- contact items -->
-                <div
+                <!-- <div
                   class="mt-0 md:mt-4 md:flex-1 flex md:block items-start space-x-12 md:space-x-0 space-y-0 md:space-y-8"
-                >
+                > -->
+                <div class="mt-0 md:mt-4 md:flex-1 block text-center md:text-left space-y-8">
                   {{ footer_links.chat(data) }}
                   <!--  -->
                   {{ footer_links.connect(data) }}
@@ -227,11 +233,17 @@
       </div>
     </div>
 
+    <!-- Real button (Mobile) -->
+    <button x-on:click="menuToggle()" class="mobile-only-block menu-menu-link transition-opacity md:hover:opacity-70">
+      <span class="text-transparent">Menu</span>
+    </button>
+
+    <!-- Real button (desktop) -->
     <button
       x-cloak
       x-show="scrolledFromTop"
-      x-on:click="toggle()"
-      class="menu-menu-link transition-opacity md:hover:opacity-70"
+      x-on:click="menuToggle()"
+      class="desktop-only-block menu-menu-link transition-opacity md:hover:opacity-70"
     >
       <span class="text-transparent">Menu</span>
     </button>

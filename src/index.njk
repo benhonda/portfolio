@@ -11,127 +11,17 @@ title: "Home"
 <div class="pt-24">
   <div class="pg-section-3">
     <div class="pg-padding-ext">
-      <!-- <h1 class="-ml-2 text-[10rem] text-white font-normal tracking-tighter leading-[0.9]">
+      <!-- <h1 class="-ml-2 text-[9rem] text-white font-normal tracking-tighter leading-[0.9]">
         bh
       </h1> -->
-      <div class="mt-64 flex items-end justify-start">
+      <div class="mt-[30vh] md:mt-72 md:flex items-end justify-start">
         <div class="flex-1">
           <h1 class="h1 h1-max-w">
             I build websites and apps for a living... <span class="">but I'd do it for free</span>*
           </h1>
         </div>
-        <div class="flex-shrink-0">
+        <div class="mt-8 md:mt-0 flex-shrink-0">
           <p class="p2">*&nbsp;(hypothetically)</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ================================================= -->
-  <!-- 01 ABOUT -->
-  <!-- ================================================= -->
-  <!-- <div id="about" class="mt-32 pg-section"> -->
-  <div id="about" class="hidden mt-32 pg-section-2">
-    <div class="pg-padding">
-      <div class="flex space-x-12 items-start justify-start">
-        <div class="flex-[3_3_0%]">
-          <p class="section-label">Hi, I'm Ben Honda</p>
-
-          <h1 class="h1 h1-max-w">
-            <!-- <span class="font-semibold">Hi, I'm Ben.</span> -->
-            I build websites and apps for a living... <span class="">but I'd do it for free</span>*
-
-            <!-- A fourth-year
-            computer science student at Queen’s University actively pursuing
-            opportunities starting Spring 2023. I build beautfully designed and
-            easy to use applications for the web and mobile, and I’ve done so
-            for companies big and small. -->
-          </h1>
-          <!-- <p class="h2 text-zinc-500 mt-12">
-            I'm on the hunt for new opportunities.
-            <a href="{{ data.resume_link }}" download class="text-white">Download my resume</a> or
-            <a href="#contact" class="text-white">contact me</a> or take a scroll.
-          </p> -->
-        </div>
-
-        <!-- ================================================= -->
-        <!-- 02 EXPERIENCE (Desktop) -->
-        <!-- ================================================= -->
-
-        <div class="desktop-only-block relative flex-1 min-w-[16rem]">
-          {#
-          <p class="section-label">Come chat</p>
-
-          <div class="space-y-8">
-            {% for item in data.quick_about %}
-            <div class="space-y-3 md:space-y-1">
-              <p class="list-label mb-2">{{ item.label }}</p>
-              {% for el in item.content %}
-              <div class="flex justify-center md:justify-start items-center flex-wrap">
-                <p class="p">
-                  {{ el }}
-                </p>
-              </div>
-              {% endfor %}
-            </div>
-            {% endfor %}
-
-            <p class="h2 text-white">
-              <a href="/employment/" class="inline-flex items-center underline transition-opacity hover:opacity-80">
-                <span class="mr-1">Learn more</span>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </a>
-            </p>
-          </div>
-          #}
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- <div class="pg-padding">
-    <div class="flex justify-start">
-      <p class="p2 mb-4">*&nbsp;(hypothetically)</p>
-    </div>
-  </div> -->
-
-  <!-- ================================================= -->
-  <!-- 02 EXPERIENCE (Mobile) -->
-  <!-- ================================================= -->
-  <div class="pg-padding">
-    <div id="experience" class="mobile-only-block pg-section pg-section-border">
-      <div>
-        <p class="section-label">02 • Experience</p>
-
-        <div class="space-y-6">
-          {% for item in data.work_exp %}
-          <p class="h2">
-            <span class="text-white font-medium">{{ item.company }}</span>
-            <br />
-            {{ item.role }}
-            <br />
-            {{ item.type }}
-          </p>
-          {% endfor %}
-
-          <p class="pt-6 h2 text-white">
-            <a href="/employment/" class="inline-flex items-center hover:underline">
-              <span class="mr-1">Learn more</span>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-6 h-6">
-                <path
-                  fill-rule="evenodd"
-                  d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </a>
-          </p>
         </div>
       </div>
     </div>
@@ -209,13 +99,14 @@ title: "Home"
       <p class="section-label">Contact</p>
     </div>
     <div class="pg-padding-ext">
-      <h2 class="text-[10rem] text-white leading-[1.0] tracking-tighter">Let's get to work.</h2>
+      <h3 class="oversize-1 max-w-2xl">Let's get to work.</h3>
+      <!-- <h3 class="text-7xl text-white leading-[1.0] tracking-tighter">Let's get to work.</h3> -->
 
-      <div class="flex space-x-12 items-start justify-start mt-24">
-        <div class="flex-[3_3_0%] space-y-16">
+      <div class="flex space-x-12 items-start justify-start">
+        <div class="flex-[3_3_0%] space-y-16 mt-12">
           <p class="h1 max-w-2xl">
             <!-- I'm ready to hit the ground running with a team that is looking for a motivated developer. -->
-            Start a conversation by <a href="mailto:bhonda89@gmail.com" class="font-medium">emailing me</a>.
+            <!-- Start a conversation by <a href="mailto:bhonda89@gmail.com" class="font-medium transition-colors hover:text-white hover:opacity-100">emailing me</a>. -->
           </p>
           <!-- <h2 class="h2 h1-max-w">
             <span class="h1"
@@ -247,16 +138,22 @@ title: "Home"
         </div>
       </div>
 
-      <div class="mt-32">
-        <div class="flex items-start justify-start space-x-24">
+      <div class="mt-20">
+        <div
+          class="text-center md:text-left md:flex items-start justify-start space-y-12 md:space-y-0 space-x-0 md:space-x-24"
+        >
           <div class="flex-[2_2_0%]">
             <div class="space-y-3 md:space-y-1">
               <p class="list-label mb-2">Hire me</p>
 
               <div class="flex justify-center md:justify-start items-center flex-wrap">
                 <p class="p">
-                  I'm looking for front end development or UI/UX design positions. I'm open to remote work and, for the
-                  right opportunity, relocation from my residence in Toronto, ON.
+                  Whether you're looking for a front-end developer with an eye for design or a designer who understands
+                  the technical side of things, I can help. Let's chat.
+
+                  <!-- I'm looking for front-end development or UI/UX
+                  design positions. I'm open to remote work and, for the right opportunity, relocation from my residence
+                  in Toronto, ON. -->
                 </p>
               </div>
             </div>

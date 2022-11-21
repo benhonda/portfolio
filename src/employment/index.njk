@@ -3,28 +3,24 @@ layout: "layouts/level_2.njk"
 title: "Work Experience"
 ---
 
+<!--  -->
+{% import "macros/secondary_page_blocks.njk" as blocks %}
+
 <div>
   <!-- ================================================= -->
   <!-- 01 ABOUT -->
   <!-- ================================================= -->
-  <div class="mt-32 pg-section-2">
-    <div class="pg-padding">
-      <p class="section-label"></p>
-      <h1 class="jumbo h1-max-w">
-        <span class="text-white">Work Experience</span>
-      </h1>
-    </div>
-  </div>
+  {{ blocks.big_intro(title="Employment") }}
 
   <!-- ================================================= -->
   <!-- TABLE -->
   <!-- ================================================= -->
   <div class="pg-section">
-    <div class="pg-padding">
+    <div class="pg-padding-ext">
       <div class="border-b border-white/90">
         {% for item in work_exp.companies %}
 
-        <div class="" x-data="{ open: false }">
+        <div x-data="{ open: false }">
           <button
             type="button"
             x-on:click="open = ! open"
@@ -33,19 +29,20 @@ title: "Work Experience"
             <div class="flex-1 md:flex md:items-center">
               <div class="flex-1">
                 <h3 class="h2 md:h1-sub leading-tight">
-                  <span x-bind:class="! open ? 'transition-colors group-hover:text-white' : 'text-white'"
-                    >{{ item.name }}</span
-                  >
+                  <span x-bind:class="! open ? 'transition-colors group-hover:text-white' : 'text-white'">{{
+                    item.name
+                  }}</span>
                 </h3>
               </div>
 
-              <p class="flex-1 section-label-text">{{ item.role }}</p>
-              <p class="mt-4 md:mt-0 flex-1 section-label-text">{{ item.timeline }}</p>
+              <p class="mt-2 md:mt-0 flex-1 section-label-text">{{ item.role }}</p>
+              <p class="flex-1 section-label-text">{{ item.timeline }}</p>
             </div>
 
             <div class="flex-shrink-0 transition-colors text-white">
               <svg
-                x-bind:class="! open ? 'w-12 h-12 md:w-12 md:h-12 transition-transform transform' : 'w-12 h-12 md:w-12 md:h-12 transition-transform transform rotate-45'"
+                class="w-8 h-8 md:w-12 md:h-12 transition-transform transform"
+                :class="! open ? '' : 'rotate-45'"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -74,7 +71,7 @@ title: "Work Experience"
               <div class="flex-[2_2_0%] flex items-start justify-start flex-wrap">
                 {% for stack in item.right_stack %}
                 <p class="list-label mb-1">{{ stack.label }}</p>
-                <ul class="pl-5 list-disc list-outside w-full space-y-3">
+                <ul class="pl-5 list-disc list-outside w-full space-y-4">
                   {% for point in stack.points %}
                   <li class="h1-sub h1-max-w">{{ point }}</li>
                   {% endfor %}

@@ -2,7 +2,7 @@ metadata:
   title_suffix: " | benhonda.dev"
   desc:
     Ben Honda is a software developer and designer from Ontario Canada. He
-    specializes in delivering dynamic, user-centric front end interfaces using
+    specializes in delivering dynamic, user-centric front-end interfaces using
     technologies including React, Svelte, Swift, Javascript, and Python.
 
 nav:
@@ -121,7 +121,7 @@ featured_work:
   - img: /assets/images/adapts-banner.png
     title: ADAPTS
     link: /projects/adapts/
-    desc: The analytics tool that powers an omnichannel agency.
+    desc: The analytics tool built for omnichannel marketing.
     # desc:
     #   ADAPTS allows The Adpharm to get specific on which channels are converting
     #   and which aren’t. This information is used to optimize the allocation of
@@ -130,10 +130,11 @@ featured_work:
   - img: /assets/images/pm-banner.png
     title: Portal Manager
     link: /projects/portal-manager/
-    desc:
-      Portals are private learning platforms that we deployed for clients of
-      IBM. I led this project that made requesting and deploying portals easier
-      than ever.
+    desc: Private learning platforms for your organization.
+    # desc:
+    #   Portals are private learning platforms that we deployed for clients of
+    #   IBM. I led this project that made requesting and deploying portals easier
+    #   than ever.
 
 featured_articles:
   - title: A philosophy for building great apps
@@ -174,7 +175,7 @@ tech_skills:
       - three.js
       - WebGL
 
-resume_link: "/assets/cv/nov2022/BenHonda_SoftwareDeveloper_Resume.pdf"
+resume_link: "/assets/cv/latest/BenHondaDeveloperResume.pdf"
 
 # ALSO
 # remember to update in SlideoutMenu... (react does not play nice with this)
@@ -188,7 +189,7 @@ links:
   - title: Blog
     url: "/blog/"
   - title: Resume
-    url: "/assets/cv/nov2022/BenHonda_SoftwareDeveloper_Resume.pdf"
+    url: "/assets/cv/latest/BenHondaDeveloperResume.pdf"
     download: true
 
 chat:

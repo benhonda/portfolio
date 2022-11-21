@@ -65,8 +65,8 @@ portals:
 
   solution1: 'A Skills Network Portal is a private learning platform for
     organizations of all kinds, from governments to enterprises. Hands-on
-    interactive courses and guided projects makes learning cutting-edge topics
-    like machine learning fun, effecient, and effective.
+    interactive courses and guided projects make learning cutting-edge topics
+    like machine learning fun, efficient, and effective.
 
     <br /> <br />
 
@@ -153,7 +153,7 @@ adapts:
     enable us to see what’s working and&mdash;more importantly&mdash;what
     isn’t.<br /><br />To make effective money-making decisions, we need data
     that is robust, reliable, and easy to understand. Data like this is tough to
-    get your hands on&mdash;and even tougher in an omnichannel strategy. Email
+    get your hands on&mdash;and even tougher in an omnichannel world. Email
     clicks, leave-behinds, journal ads, social media engagement&mdash;it’s all
     very hard to track. <br /><br /> That’s why we created ADAPTS.
 
@@ -253,12 +253,12 @@ adapts:
   tech3:
     - title: "Create React App (CRA)"
       content:
-        - 'I used React (more specifically CRA) to build the dynamic front end
+        - 'I used React (more specifically CRA) to build the dynamic front-end
           interface. ADAPTS is fully auth-gated, so there was no need for
           server-rendered HTML for things like SEO. React is a framework I am
-          comfortable in so it gave me the freedom to build quickly. ADAPTS also
-          gave me the opportunity to try <a href="https://vitejs.dev/"
-          target="_blank" rel="noreferrer">Vite</a>, a front end tooling system
+          comfortable with so it gave me the freedom to build quickly. ADAPTS
+          also gave me the opportunity to try <a href="https://vitejs.dev/"
+          target="_blank" rel="noreferrer">Vite</a>, a front-end tooling system
           that can replace Webpack. It&apos;s faster and easier to configure
           than Webpack. I like it.'
     - title: "Django"
@@ -274,12 +274,12 @@ adapts:
           social auth or SSO.'
     - title: "Django Rest Framework"
       content:
-        - 'With the SPA front end, <a
+        - 'With the SPA front-end, <a
           href="https://www.django-rest-framework.org/" target="_blank"
           rel="noreferrer">Django Rest Framework (DRF)</a> was a necessary
           addition to get data to and from the database (in client-side routing
-          we only get data from the server on initial page load). With our
-          monolithic architecture it was easy to secure our API using the
+          we only get data from the server on the initial page load). With our
+          monolithic architecture, it was easy to secure our API using the
           session cookies that Django exposes.'
     - title: "Database (SQLite)"
       content:
@@ -290,9 +290,9 @@ adapts:
           href="https://www.bitformations.ca/" target="_blank"
           rel="noreferrer">Colin McDonald</a>, made me see the light. SQLite is
           capable of handling 100k requests/day safely and, in some cases, up to
-          10x that. We were not coming even close to that. With it&apos;s
-          seemless integration with Django and portability advantages, SQLite
-          turned out to be the obvious choice.'
+          10x that. We were not coming even close to that. With its seemless
+          integration with Django and portability advantages, SQLite turned out
+          to be the obvious choice.'
 #
 #
 #

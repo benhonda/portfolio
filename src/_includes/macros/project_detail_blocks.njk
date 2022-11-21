@@ -4,16 +4,16 @@
 {% macro big_intro(title="", subtitle="", stack_data=[]) %}
 <div class="mt-20 pg-section-3 pg-section-border">
   <div class="pg-padding-ext">
-    <div class="flex items-start">
+    <div class="md:flex space-y-16 md:space-y-0 items-start">
       <div class="flex-[3_3_0%]">
-        <h1 class="text-[10rem] max-w-4xl tracking-tighter leading-[0.9] text-white">{{ title }}</h1>
-        <div class="mt-40">
+        <h1 class="max-w-4xl oversize-1">{{ title }}</h1>
+        <div class="mt-[20vh] md:mt-52">
           <h2 class="h1-sub h1-max-w">{{ subtitle }}</h2>
         </div>
       </div>
 
       <div class="flex-1 min-w-[16rem]">
-        <div class="mt-6 space-y-8">
+        <div class="mt-4 space-y-8">
           {% for item in stack_data %}
           <div>
             <p class="list-label mb-1">{{ item.label }}</p>
@@ -29,7 +29,7 @@
 
 <!--  -->
 {% macro big_image_section(src="", alt="") %}
-<div class="relative pg-section">
+<div class="relative pg-section-3">
   <div class="pg-padding-ext">
     <img src="{{ src }}" alt="{{ alt }}" class="w-full object-contain" />
   </div>

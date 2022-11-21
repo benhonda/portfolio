@@ -20,7 +20,11 @@
   }
 
   .menu-links {
-    @apply text-zinc-50 dark:text-zinc-900 tracking-wide font-serif;
+    @apply md:text-lg text-zinc-50 dark:text-zinc-900 tracking-wide font-serif;
+  }
+
+  .oversize-1 {
+    @apply text-7xl md:text-[9rem] text-white leading-[0.9] tracking-tighter;
   }
 
   .h1 {
@@ -64,7 +68,7 @@
   }
 
   .pg-padding-ext {
-    @apply relative max-w-[100rem] mx-auto px-4 lg:px-8;
+    @apply relative max-w-[128rem] mx-auto px-4 lg:px-8;
   }
 
   .pg-padding {
@@ -118,6 +122,6 @@
 
   .link,
   a {
-    @apply font-medium underline hover:opacity-80 transition-opacity;
+    @apply underline hover:opacity-80 transition-opacity;
   }
 }
