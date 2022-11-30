@@ -11,10 +11,8 @@ portals:
     do&mdash;design, build, and lead.'
   stack1:
     # we'll do table of contents separately
-    - label: "Live"
-      content:
-        '<a href="https://portals.skills.network/" target="_blank"
-        rel="noreferrer">portals.skills.network/</a>'
+    - label: Status
+      content: Offline
     - label: "With"
       content:
         '<a href="https://www.ibm.com" target="_blank" rel="noreferrer">IBM

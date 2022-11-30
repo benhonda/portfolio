@@ -14,13 +14,16 @@ companies:
         points:
           # - Designed and built ADAPTS, a link shortener used to track clicks and QR-code scans of assets and files across multiple mediums including print, email, and web.
           # - Delivered digital products for clients in the form of programmed emails, surveys, and static sites. To expedite the development of the latter, I created a SSG tailored directly for our needs.
-          - Orchestrated the design and development of a URL shortener (ADAPTS)
-            that allowed The Adpharm to charge 5&nbsp;-&nbsp;20% more per
-            account
+          # - Orchestrated the design and development of a URL shortener (ADAPTS)
+          #   that allowed The Adpharm to charge 5&nbsp;-&nbsp;20% more per
+          #   account
+          - Orchestrated the design and development of a Django + React URL
+            shortener that has generated over $40K for The Adpharm since its
+            inception
           - Decreased web development time by nearly 15% by implementing design
             and development processes I had learned from my previous work at IBM
-          - Built a static site generator that resulted in fewer bugs, cleaner
-            code, and nearly 10% less development time on websites for clients
+          - Built a Static Site Generator that resulted in fewer bugs, cleaner
+            code, and nearly 5 hours less development time per website
 
   - name: IBM
     role: Frontend Software Developer
@@ -48,8 +51,8 @@ companies:
             deployment and management of Skills Network Portals, saving ~3 hrs
             per developer per week
           - Co-led the transformation of a legacy React app into a hands-on
-            learning platform that has been used by thousands of students in
-            online courses provided by IBM and Coursera
+            learning tool that hundreds of students use every month to build
+            computer vision models in-browser
           - Deployed and maintained private learning platforms for clients on
             IBM Cloud using Kubernetes and OpenShift, achieving the industry
             standard 99.9% up-time

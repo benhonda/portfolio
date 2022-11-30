@@ -139,7 +139,7 @@ featured_work:
 featured_articles:
   - title: A philosophy for building great apps
     type: Bottomless collection
-  - title: Building a static site generator from scratch
+  - title: Building a Static Site Generator from scratch
     type: Case Study
   - title: Build a personal cloud storage server in a day
     type: Tutorial
@@ -175,7 +175,7 @@ tech_skills:
       - three.js
       - WebGL
 
-resume_link: "/assets/cv/latest/BenHondaDeveloperResume.pdf"
+resume_link: "/assets/cv/Resume - BenHonda.dev.pdf"
 
 # ALSO
 # remember to update in SlideoutMenu... (react does not play nice with this)
@@ -189,7 +189,7 @@ links:
   - title: Blog
     url: "/blog/"
   - title: Resume
-    url: "/assets/cv/latest/BenHondaDeveloperResume.pdf"
+    url: "/assets/cv/Resume - BenHonda.dev.pdf"
     download: true
 
 chat:
